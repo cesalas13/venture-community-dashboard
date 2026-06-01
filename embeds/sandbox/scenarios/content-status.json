@@ -1,0 +1,11 @@
+{
+  "name": "content-status",
+  "description": "Content automation visibility only. Use this to confirm the framework routes around newsletter/social automation instead of rebuilding it.",
+  "enabled_sources": {
+    "gmail": false,
+    "telegram": false,
+    "relay": false,
+    "luma": false,
+    "content": true
+  }
+}

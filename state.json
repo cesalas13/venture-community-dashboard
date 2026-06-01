@@ -1,0 +1,2382 @@
+{
+  "generated_at": "2026-05-22T02:06:50.360391+00:00",
+  "now": {
+    "focus": "Phase 4 venue workstream build \u00b7 flagship dinner outreach",
+    "next_event": "Founder Lab Visit \u00b7 2026-05-28",
+    "running": 4,
+    "last_touched": "event master sync"
+  },
+  "products": [
+    {
+      "name": "Event Ops",
+      "status": "sheet surface",
+      "purpose": "Keep the Events Master Sheet visible as a product surface. Snapshot and updates are not the live automation.",
+      "primary_surface": "Event Master Sheet",
+      "supporting_surfaces": [
+        "Event Master copy",
+        "Human in the loop",
+        "Sheet snapshot"
+      ]
+    },
+    {
+      "name": "Venue",
+      "status": "active build",
+      "purpose": "Match events to venues, draft outreach, track replies, and maintain venue memory.",
+      "primary_surface": "Venue Outreach",
+      "supporting_surfaces": [
+        "Venue tracker",
+        "Venue memory",
+        "Gmail replies"
+      ]
+    },
+    {
+      "name": "Newsletter",
+      "status": "live automation \u00b7 WIP",
+      "purpose": "Show newsletter status, issue queue, links, and feedback workflow.",
+      "primary_surface": "Newsletter Sheet",
+      "supporting_surfaces": [
+        "Generate tab",
+        "Hyperlinks",
+        "Feedback"
+      ]
+    },
+    {
+      "name": "Speaker Prep",
+      "status": "draft-only",
+      "purpose": "Prepare speaker briefs, bios, panel questions, logistics, and briefing emails.",
+      "primary_surface": "Workstream Products Demo",
+      "supporting_surfaces": [
+        "Speaker docs",
+        "Panel questions",
+        "Briefing emails"
+      ]
+    },
+    {
+      "name": "Sponsors",
+      "status": "draft-only",
+      "purpose": "Research sponsor prospects, score fit, draft outreach, and produce sponsor-ready followups.",
+      "primary_surface": "Sponsor Pipeline",
+      "supporting_surfaces": [
+        "Prospecting",
+        "Fit scoring",
+        "One-pagers"
+      ]
+    },
+    {
+      "name": "Outreach",
+      "status": "planned",
+      "purpose": "Find stale relationships, rank contacts, draft followups, and monitor replies.",
+      "primary_surface": "Outreach Workstream",
+      "supporting_surfaces": [
+        "Contact list",
+        "Gmail drafts",
+        "Reply monitor"
+      ]
+    }
+  ],
+  "work_status": {
+    "date": "2026-05-15",
+    "summary": "Dashboard day: renamed the workspace to Venture Community, moved the UI to Workstreams, added embeds, calendar, newsletter status, and safer sheet-copy surfaces.",
+    "done": [
+      "Updated logo, Dock app, and black workspace dashboard UI.",
+      "Fixed newsletter draft guardrails and prepared it for review.",
+      "Added sandbox, newsletter, sheet, GitHub, and finance embeds with safe fallbacks.",
+      "Renamed Spokes to Workstreams across dashboard and workspace.",
+      "Added calendar countdown and Events Master copy embed."
+    ],
+    "next": [
+      "Choose newsletter cadence: weekly, biweekly, or event-only.",
+      "Use the refreshed Events Master snapshot before making live event updates.",
+      "Test one Builder Meetup recap draft before sending anything live.",
+      "Use the safe sandbox walkthrough for a nontechnical demo.",
+      "Close or reschedule past-due flagship venue and sponsor items."
+    ]
+  },
+  "sheet_sync": {
+    "source_name": "Events Master Sheet",
+    "source_url": "#/sources",
+    "embed_source_name": "Copy of All Events (Master) - Venture Community",
+    "embed_source_url": "#/sources",
+    "sheet_id": "demo-event-tracker-id",
+    "tab": "Calendar",
+    "header_row": 7,
+    "date_label": "EVENT DATE",
+    "dashboard_date": "2026-05-28",
+    "event_name": "Founder Lab Visit",
+    "event_status": "Plan",
+    "newsletter_status": "Scheduled",
+    "sheet_row": 270,
+    "row_count": 264,
+    "last_synced_at": "2026-05-22T02:06:50.360391+00:00",
+    "status": "snapshot refreshed",
+    "sync_command": "python3 ./workspace-framework/scripts/pull_snapshot.py && python3 ./workspace-dashboard/scripts/sync-event-master.py",
+    "next_step": "Current Events Master snapshot is refreshed. Refresh again before any live sheet write."
+  },
+  "newsletter_automation": {
+    "name": "newsletter-v11",
+    "status": "live automation \u00b7 WIP debugging",
+    "sheet_title": "Community Newsletter Workflow (Automated)",
+    "sheet_url": "#/sources",
+    "active_tab": "Generate",
+    "active_gid": 1621685316,
+    "current_issue": "Founder Lab Visit",
+    "event_date": "2026-05-28",
+    "newsletter_status": "Scheduled",
+    "featured_event_source": "Events Master Sheet row 270",
+    "scheduled_events": 6,
+    "featured_events": 2,
+    "skipped_events": 2,
+    "workflow": [
+      {
+        "label": "Generate",
+        "detail": "Open the Generate tab, refresh the event context, then create a reviewed draft."
+      },
+      {
+        "label": "Guardrails",
+        "detail": "Checks keep the draft on voice and block formatting problems before publishing."
+      },
+      {
+        "label": "Links",
+        "detail": "Populate Hyperlinks tab, then apply approved URLs into the draft Doc."
+      },
+      {
+        "label": "Feedback",
+        "detail": "Process Feedback tab into Elements voice rules before the next issue."
+      }
+    ],
+    "next_step": "Debug the live newsletter automation, decide cadence, then test one reviewed issue before unpausing regular sends."
+  },
+  "embeds": [
+    {
+      "name": "Sandbox Operator Console",
+      "category": "sandbox",
+      "kind": "local-html",
+      "description": "Fake-data operator console for event ops approvals, proposals, and sandbox state. Demonstrates the product without touching live systems.",
+      "url": "./embeds/sandbox/demo/operator-console.html",
+      "embed_url": "./embeds/sandbox/demo/operator-console.html",
+      "safety": "Local sandbox only. Uses fake fixtures and local JSON, no Gmail, Telegram, Sheets, Relay, or Luma writes.",
+      "featured": true
+    },
+    {
+      "name": "Sandbox Run Surfaces",
+      "category": "sandbox",
+      "kind": "local-html",
+      "description": "All-lanes sandbox product map for fake Gmail, Telegram, Relay CRM, Luma, content status, and Events Sheet fixtures.",
+      "url": "./embeds/sandbox/demo/run-surfaces.html",
+      "embed_url": "./embeds/sandbox/demo/run-surfaces.html",
+      "safety": "Local demo artifact only. Read-only fake data.",
+      "featured": false
+    },
+    {
+      "name": "Sandbox VC Demo",
+      "category": "sandbox",
+      "kind": "local-html",
+      "description": "Click-through VC demo path for the community workflow story.",
+      "url": "./embeds/sandbox/demo/vc-demo.html",
+      "embed_url": "./embeds/sandbox/demo/vc-demo.html",
+      "safety": "Local demo artifact only. No live integrations.",
+      "featured": false
+    },
+    {
+      "name": "Newsletter Console Demo",
+      "category": "newsletter",
+      "kind": "local-html",
+      "description": "Sandbox console for newsletter/content status visibility around the v11 automation adapter.",
+      "url": "./embeds/sandbox/demo/newsletter-console.html",
+      "embed_url": "./embeds/sandbox/demo/newsletter-console.html",
+      "safety": "Local fake-data console. Does not publish or write drafts.",
+      "featured": false
+    },
+    {
+      "name": "Workstream Products Demo",
+      "category": "workstreams",
+      "kind": "local-html",
+      "description": "Draft-only console for speaker prep, sponsors, and outreach product workstreams.",
+      "url": "./embeds/sandbox/demo/workstream-products.html",
+      "embed_url": "./embeds/sandbox/demo/workstream-products.html",
+      "safety": "Local fake-data console. Draft-only workstream demonstrations.",
+      "featured": false
+    },
+    {
+      "name": "Finances",
+      "category": "personal",
+      "kind": "external-app",
+      "description": "ChatGPT financial dashboard shortcut from the personal dashboard request.",
+      "url": "https://chatgpt.com/finances",
+      "embed": false,
+      "safety": "Launch only. ChatGPT pages are account-bound and should stay outside a dashboard iframe."
+    },
+    {
+      "name": "VCW Workspace GitHub Repo",
+      "category": "code",
+      "kind": "external-app",
+      "description": "Private GitHub repository for the Venture Community Workspace framework.",
+      "url": "https://example.invalid/workspace-framework",
+      "embed": false,
+      "safety": "Launch only. Private GitHub authentication and repo permissions should not be framed."
+    }
+  ],
+  "events": {
+    "funnel": [
+      {
+        "label": "idea",
+        "count": 12
+      },
+      {
+        "label": "plan",
+        "count": 7
+      },
+      {
+        "label": "live",
+        "count": 3
+      },
+      {
+        "label": "done",
+        "count": 38
+      }
+    ],
+    "target": "Flagship founder dinner, spacetech panel, founder roundtable",
+    "next_step": "Past due: confirm whether the flagship venue choice still matters, then either close it or move the venue work to the next event."
+  },
+  "venues": {
+    "funnel": [
+      {
+        "label": "scouted",
+        "count": 14
+      },
+      {
+        "label": "drafted",
+        "count": 9
+      },
+      {
+        "label": "contacted",
+        "count": 3
+      },
+      {
+        "label": "replied",
+        "count": 1
+      },
+      {
+        "label": "booked",
+        "count": 0
+      }
+    ],
+    "note": "flagship outreach: 3 venues ranked (Venue Alpha, Venue Beta, Venue Gamma), Venue Alpha ready to send"
+  },
+  "sponsors": {
+    "next_event_label": "Flagship Week",
+    "sponsors_count": 4,
+    "next_step": "Past due: confirm whether the flagship sponsor asks are still relevant, then close or reschedule them."
+  },
+  "pipeline": {
+    "runs_this_month": 23,
+    "approved_writes": 19,
+    "rejected_writes": 4,
+    "drift_blocks": 1,
+    "cost_this_month_usd": 5.4,
+    "last_run_at": "2026-05-08",
+    "queue_files": 14
+  },
+  "cost_scenarios": {
+    "version": "1.0",
+    "generated_at": "2026-05-19T14:50:00",
+    "scope": "All six products on the workboard: Event Ops, Venue, Newsletter, Speaker Prep, Sponsors, Outreach.",
+    "source_doc": "workspace-framework/docs/cost-optimization-plan/07-six-product-cost-scenarios.md",
+    "status": "planning estimate, not metered",
+    "pricing": {
+      "checked_on": "2026-05-22",
+      "claude_haiku_4_5": {
+        "input_per_1m": 1,
+        "output_per_1m": 5,
+        "use": "extraction, routing, cheap classification"
+      },
+      "claude_sonnet_4_6": {
+        "input_per_1m": 3,
+        "output_per_1m": 15,
+        "use": "fuzzy matching, judgment ranking, high-stakes drafts"
+      },
+      "deterministic": {
+        "cost": 0,
+        "use": "Python, Apps Script, Sheets/Gmail/Calendar/Docs/Drive APIs"
+      }
+    },
+    "methodology": {
+      "token_conversion": "4 characters per token; JSON-heavy payloads rounded up ~15% for key/quote overhead.",
+      "output_sizing": "Sized to typical draft length, not the API MAX_TOKENS ceiling.",
+      "prompt_caching": "NOT modeled. Once on, expect 30-50% reduction on input portion of stable-context calls.",
+      "google_apis_cost": "Modeled at $0 (free at VCW volume).",
+      "web_search_fees": "Bundled into the Sonnet synthesis call. If the implementation uses Anthropic's web_search tool, add ~$0.05-0.10 per search."
+    },
+    "scenarios": {
+      "A": {
+        "label": "Sandbox / Demo",
+        "description": "Today's state. Fixture-first, ~10 demo calls/month per product, no production cadence honored except Event Ops."
+      },
+      "B": {
+        "label": "Production-Lite",
+        "description": "Each product at the cadence the workboard implies, with today's architecture. No quick wins applied."
+      },
+      "C": {
+        "label": "Production-Heavy",
+        "description": "Worst realistic ceiling. 2x cadence, Sonnet everywhere, no caching, no fixtures, no prefilter."
+      },
+      "D": {
+        "label": "Optimized Production",
+        "description": "Scenario B cadences after the quick wins from 02-quick-wins.md and architecture moves from 04-architecture-improvements.md land."
+      }
+    },
+    "totals": {
+      "A": 3.24,
+      "B": 17.45,
+      "C": 52.4,
+      "D": 5.75
+    },
+    "products": [
+      {
+        "name": "Event Ops",
+        "status": "live foundation",
+        "phase": 3,
+        "cadence": "60 runs/month (twice daily full pipeline)",
+        "call_sites": [
+          {
+            "name": "Gmail Reader",
+            "file": "scripts/run_gmail_reader.py",
+            "model": "Haiku",
+            "input_tokens": 8000,
+            "output_tokens": 1000,
+            "per_call": 0.013,
+            "calls_per_month": 60,
+            "monthly": 0.78,
+            "source": "measured"
+          },
+          {
+            "name": "Telegram Reader",
+            "file": "scripts/run_telegram_reader.py",
+            "model": "Haiku",
+            "input_tokens": 6000,
+            "output_tokens": 1000,
+            "per_call": 0.011,
+            "calls_per_month": 60,
+            "monthly": 0.66,
+            "source": "measured"
+          },
+          {
+            "name": "Event Classifier",
+            "file": "scripts/run_event_classifier.py",
+            "model": "Sonnet",
+            "input_tokens": 45000,
+            "output_tokens": 2000,
+            "per_call": 0.165,
+            "calls_per_month": 60,
+            "monthly": 9.9,
+            "source": "measured"
+          }
+        ],
+        "monthly": {
+          "A": 1.89,
+          "B": 11.34,
+          "C": 30.5,
+          "D": 3.0
+        },
+        "cost_shape": "Event Classifier is 87.3% of product spend. Input-heavy (full event snapshot, 264 events, 166 KB JSON sent to Sonnet each run).",
+        "risk_vectors": [
+          "More events in the sheet (snapshot grows linearly)",
+          "Busier Gmail/Telegram (classifier fires more reliably)",
+          "Run frequency increase (2x = 2x cost)",
+          "Switching Gmail Reader from Haiku to Sonnet (4x that line)"
+        ],
+        "scenario_d_levers": [
+          "Snapshot narrowing: classifier input 45k -> ~10k tokens, per-call $0.165 -> $0.060",
+          "Deterministic prefilter on readers: cuts ~40% of low-signal calls",
+          "Prompt caching on stable classifier instructions: trims ~$0.50/mo"
+        ]
+      },
+      {
+        "name": "Venue",
+        "status": "active build",
+        "phase": 4,
+        "cadence": "~4 events/month",
+        "call_sites": [
+          {
+            "name": "Venue Matcher",
+            "skill_id": "S048-S050",
+            "model": "Sonnet",
+            "input_tokens": 11000,
+            "output_tokens": 1000,
+            "per_call": 0.048,
+            "calls_per_month": 4,
+            "monthly": 0.19,
+            "source": "inferred"
+          },
+          {
+            "name": "Venue Outreach Drafter",
+            "skill_id": "S051",
+            "model": "Sonnet",
+            "input_tokens": 4000,
+            "output_tokens": 800,
+            "per_call": 0.024,
+            "calls_per_month": 12,
+            "monthly": 0.29,
+            "source": "inferred"
+          },
+          {
+            "name": "Venue Prospect Finder",
+            "skill_id": "S054",
+            "model": "Sonnet",
+            "input_tokens": 30000,
+            "output_tokens": 2000,
+            "per_call": 0.12,
+            "calls_per_month": 4,
+            "monthly": 0.48,
+            "source": "inferred"
+          },
+          {
+            "name": "Venue Confirmation Tracker",
+            "skill_id": "S052",
+            "model": "Haiku",
+            "input_tokens": 3000,
+            "output_tokens": 300,
+            "per_call": 0.005,
+            "calls_per_month": 20,
+            "monthly": 0.1,
+            "source": "inferred"
+          },
+          {
+            "name": "Venue Day-of Doc Builder",
+            "skill_id": "S053",
+            "model": "Haiku",
+            "input_tokens": 5000,
+            "output_tokens": 1000,
+            "per_call": 0.01,
+            "calls_per_month": 4,
+            "monthly": 0.04,
+            "source": "inferred"
+          }
+        ],
+        "monthly": {
+          "A": 0.2,
+          "B": 1.1,
+          "C": 4.8,
+          "D": 0.5
+        },
+        "cost_shape": "Prospect Finder is the unbounded line; everything else is event-count-bounded.",
+        "risk_vectors": [
+          "Aggressive prospect research (3-5 Prospect Finder calls per event vs 1)",
+          "Multi-pass Sonnet matcher (one pass per shortlisted venue)",
+          "Confirmation Tracker upgraded to Sonnet (5x that line)"
+        ],
+        "scenario_d_levers": [
+          "Cache venue memory + voice rules in Drafter context (drop input ~50%)",
+          "Deterministic keyword classifier before Confirmation Tracker LLM",
+          "Cap Prospect Finder web bundle at 20k tokens"
+        ]
+      },
+      {
+        "name": "Newsletter",
+        "status": "paused (v11 needs cadence decision)",
+        "phase": "adapter to existing Apps Script",
+        "cadence": "1 issue every 2 weeks (2/month)",
+        "call_sites": [
+          {
+            "name": "Generate Draft",
+            "trigger": "menu: 1. Generate Draft",
+            "model": "Sonnet",
+            "input_tokens": 20000,
+            "output_tokens": 4000,
+            "per_call": 0.12,
+            "calls_per_month": 4,
+            "monthly": 0.48,
+            "source": "inferred"
+          },
+          {
+            "name": "Revise Last Draft",
+            "trigger": "menu: 3. Revise Last Draft",
+            "model": "Sonnet",
+            "input_tokens": 6000,
+            "output_tokens": 4000,
+            "per_call": 0.078,
+            "calls_per_month": 6,
+            "monthly": 0.47,
+            "source": "inferred"
+          },
+          {
+            "name": "Learn From Issue",
+            "trigger": "menu: 4. Learn from This Issue",
+            "model": "Sonnet",
+            "input_tokens": 8000,
+            "output_tokens": 2000,
+            "per_call": 0.054,
+            "calls_per_month": 2,
+            "monthly": 0.11,
+            "source": "inferred"
+          },
+          {
+            "name": "Scrape Luma URL",
+            "trigger": "menu: Scrape Luma URL",
+            "model": "Haiku",
+            "input_tokens": 2000,
+            "output_tokens": 1000,
+            "per_call": 0.007,
+            "calls_per_month": 6,
+            "monthly": 0.04,
+            "source": "inferred"
+          }
+        ],
+        "monthly": {
+          "A": 0.4,
+          "B": 1.1,
+          "C": 4.2,
+          "D": 0.5
+        },
+        "cost_shape": "Revise + Generate = 86% of newsletter spend. All four LLM calls run Sonnet (Apps Script v11 hardcodes it). Output tokens are large (4k draft body).",
+        "risk_vectors": [
+          "More revise rounds per issue (3 -> 6 doubles the Revise line)",
+          "Weekly cadence instead of biweekly (whole product 2x)",
+          "Longer issues (6k output instead of 4k)"
+        ],
+        "scenario_d_levers": [
+          "Switch Scrape Luma to deterministic HTML parse (drop entire $0.04 line)",
+          "Cache voice rules + Elements + past issues (Generate input 20k -> ~8k effective)",
+          "Add DRY_RUN flag to Apps Script for menu testing without billing"
+        ]
+      },
+      {
+        "name": "Speaker Prep",
+        "status": "draft-only",
+        "phase": 5,
+        "cadence": "1 event/month with 3 speakers (3 prep packs/month)",
+        "call_sites": [
+          {
+            "name": "Speaker Bio Fetcher",
+            "skill_id": "S056",
+            "model": "Sonnet",
+            "input_tokens": 25000,
+            "output_tokens": 1000,
+            "per_call": 0.09,
+            "calls_per_month": 3,
+            "monthly": 0.27,
+            "source": "inferred"
+          },
+          {
+            "name": "Speaker Detail Filler",
+            "skill_id": "S057",
+            "model": "Haiku",
+            "input_tokens": 4000,
+            "output_tokens": 1000,
+            "per_call": 0.009,
+            "calls_per_month": 3,
+            "monthly": 0.03,
+            "source": "inferred"
+          },
+          {
+            "name": "Panel Question Generator",
+            "skill_id": "S058",
+            "model": "Sonnet",
+            "input_tokens": 8000,
+            "output_tokens": 2000,
+            "per_call": 0.054,
+            "calls_per_month": 1,
+            "monthly": 0.05,
+            "source": "inferred"
+          },
+          {
+            "name": "Briefing Email Drafter",
+            "skill_id": "S059",
+            "model": "Sonnet",
+            "input_tokens": 6000,
+            "output_tokens": 1000,
+            "per_call": 0.033,
+            "calls_per_month": 3,
+            "monthly": 0.1,
+            "source": "inferred"
+          },
+          {
+            "name": "Speaker Prep Gap Detector",
+            "skill_id": "S062",
+            "model": "Haiku",
+            "input_tokens": 4000,
+            "output_tokens": 500,
+            "per_call": 0.007,
+            "calls_per_month": 3,
+            "monthly": 0.02,
+            "source": "inferred"
+          }
+        ],
+        "monthly": {
+          "A": 0.1,
+          "B": 0.47,
+          "C": 1.9,
+          "D": 0.2
+        },
+        "cost_shape": "Bio Fetcher = 57% (web research synthesis). Panel Q runs per-event, not per-speaker. Deterministic skills are zero-cost on purpose.",
+        "risk_vectors": [
+          "Multi-speaker events (5 speakers scales Bio/Detail/Brief linearly)",
+          "Regenerating panel questions 3x per event",
+          "Switching Detail Filler / Gap Detector to Sonnet"
+        ],
+        "scenario_d_levers": [
+          "Cache event brief + voice rules in Briefing Drafter (per call $0.033 -> $0.024)",
+          "Reuse Bio Fetcher output across Briefing + Panel Q (no second LLM pass)",
+          "Cap Bio Fetcher web bundle at 15k tokens (most bios don't need more)"
+        ]
+      },
+      {
+        "name": "Sponsors",
+        "status": "draft-only",
+        "phase": 6,
+        "cadence": "1 outreach push/month + daily Funding Watcher (30 runs/mo)",
+        "call_sites": [
+          {
+            "name": "Sponsor Prospector",
+            "skill_id": "S067",
+            "model": "Sonnet",
+            "input_tokens": 20000,
+            "output_tokens": 3000,
+            "per_call": 0.105,
+            "calls_per_month": 10,
+            "monthly": 1.05,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Fit Scorer",
+            "skill_id": "S068",
+            "model": "Haiku",
+            "input_tokens": 5000,
+            "output_tokens": 1000,
+            "per_call": 0.01,
+            "calls_per_month": 10,
+            "monthly": 0.1,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Onepager Generator",
+            "skill_id": "S070",
+            "model": "Sonnet",
+            "input_tokens": 8000,
+            "output_tokens": 4000,
+            "per_call": 0.084,
+            "calls_per_month": 3,
+            "monthly": 0.25,
+            "source": "inferred"
+          },
+          {
+            "name": "Cold Outreach Drafter",
+            "skill_id": "S071",
+            "model": "Sonnet",
+            "input_tokens": 6000,
+            "output_tokens": 1000,
+            "per_call": 0.033,
+            "calls_per_month": 5,
+            "monthly": 0.17,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Thank-You Drafter",
+            "skill_id": "S072",
+            "model": "Haiku",
+            "input_tokens": 3000,
+            "output_tokens": 500,
+            "per_call": 0.006,
+            "calls_per_month": 3,
+            "monthly": 0.02,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Renewal Prompter",
+            "skill_id": "S073",
+            "model": "Haiku",
+            "input_tokens": 4000,
+            "output_tokens": 500,
+            "per_call": 0.007,
+            "calls_per_month": 2,
+            "monthly": 0.01,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Funding Watcher",
+            "skill_id": "S069",
+            "model": "Haiku",
+            "input_tokens": 5000,
+            "output_tokens": 1000,
+            "per_call": 0.01,
+            "calls_per_month": 30,
+            "monthly": 0.3,
+            "source": "inferred"
+          },
+          {
+            "name": "Sponsor Next Angle Suggester",
+            "skill_id": "S074",
+            "model": "Sonnet",
+            "input_tokens": 6000,
+            "output_tokens": 1000,
+            "per_call": 0.033,
+            "calls_per_month": 1,
+            "monthly": 0.03,
+            "source": "inferred"
+          }
+        ],
+        "monthly": {
+          "A": 0.35,
+          "B": 1.93,
+          "C": 5.8,
+          "D": 0.85
+        },
+        "cost_shape": "Prospector is 55% (web research). Funding Watcher is the only daily-cadence call site. Onepager output is large (4k tokens).",
+        "risk_vectors": [
+          "Aggressive prospecting (30 candidates/push instead of 10): Prospector $1.05 -> $3.15",
+          "Onepager every candidate (10 instead of 3): $0.25 -> $0.84",
+          "Funding Watcher 4x daily instead of 1x: $0.30 -> $1.20",
+          "Funding Watcher escalated to Sonnet: $0.30 -> $1.80"
+        ],
+        "scenario_d_levers": [
+          "Two-stage Prospector (Haiku scan 50, Sonnet synthesize top 10): 5x funnel for similar dollars",
+          "Funding Watcher batched weekly with digest: $0.30 -> $0.07",
+          "Cache sponsor criteria + voice rules across Onepager + Outreach + Next Angle (-30% input)"
+        ]
+      },
+      {
+        "name": "Outreach",
+        "status": "planned",
+        "phase": 7,
+        "cadence": "4 weekly pushes/month",
+        "call_sites": [
+          {
+            "name": "Stale Relationship Detector",
+            "skill_id": "S079",
+            "model": "Haiku",
+            "input_tokens": 8000,
+            "output_tokens": 1000,
+            "per_call": 0.013,
+            "calls_per_month": 4,
+            "monthly": 0.05,
+            "source": "inferred"
+          },
+          {
+            "name": "Relationship Stager",
+            "skill_id": "S078",
+            "model": "Haiku",
+            "input_tokens": 6000,
+            "output_tokens": 1000,
+            "per_call": 0.011,
+            "calls_per_month": 4,
+            "monthly": 0.04,
+            "source": "inferred"
+          },
+          {
+            "name": "Contact Ranker",
+            "skill_id": "S081",
+            "model": "Sonnet",
+            "input_tokens": 12000,
+            "output_tokens": 2000,
+            "per_call": 0.066,
+            "calls_per_month": 4,
+            "monthly": 0.26,
+            "source": "inferred"
+          },
+          {
+            "name": "Purpose Router",
+            "skill_id": "S080",
+            "model": "Haiku",
+            "input_tokens": 3000,
+            "output_tokens": 500,
+            "per_call": 0.006,
+            "calls_per_month": 20,
+            "monthly": 0.12,
+            "source": "inferred"
+          },
+          {
+            "name": "Cold Outreach Drafter",
+            "skill_id": "S085",
+            "model": "Sonnet",
+            "input_tokens": 5000,
+            "output_tokens": 1000,
+            "per_call": 0.03,
+            "calls_per_month": 20,
+            "monthly": 0.6,
+            "source": "inferred"
+          },
+          {
+            "name": "Warm Intro Finder",
+            "skill_id": "S086",
+            "model": "Sonnet",
+            "input_tokens": 8000,
+            "output_tokens": 1000,
+            "per_call": 0.039,
+            "calls_per_month": 12,
+            "monthly": 0.47,
+            "source": "inferred"
+          }
+        ],
+        "monthly": {
+          "A": 0.3,
+          "B": 1.54,
+          "C": 5.2,
+          "D": 0.7
+        },
+        "cost_shape": "Cold Outreach Drafter = 39% (volume-driven). Warm Intro Finder = 31% (web research per call). Contact Ranker weekly so per-call expense bounded.",
+        "risk_vectors": [
+          "Daily outreach pushes instead of weekly (whole product 7x: $1.54 -> ~$10.78)",
+          "20 cold drafts/week instead of 5: Cold Outreach $0.60 -> $2.40",
+          "Warm Intro Finder per contact instead of per shortlist: $0.47 -> $1.95"
+        ],
+        "scenario_d_levers": [
+          "Cache voice rules + outreach style + relationship-stage criteria (-30% input)",
+          "Move Stale Detector + Relationship Stager to deterministic SQL/sheet query (drop entire $0.09)",
+          "Batch Warm Intro Finder by contact cluster (3 contacts/search): $0.47 -> $0.18",
+          "14-day cooldown gate per contact (indirect savings)"
+        ]
+      }
+    ],
+    "caveats": [
+      "Token counts are planning estimates; expect +/-20% variance vs measured cost-tracker output.",
+      "No prompt caching modeled. Once on, Scenario D drops to ~$4-5/month range.",
+      "Anthropic pricing checked 2026-05-22; refresh against model-cost-map.md if it changes.",
+      "Cadences assume 1 flagship event/month; flagship / Demo Day months can roughly 2x Venue+Speaker+Sponsors.",
+      "Newsletter cadence assumes biweekly; weekly cadence doubles that product to ~$2.20/mo.",
+      "Outreach cadence assumes weekly; daily would scale linearly to ~$6.50/mo at Scenario B volume.",
+      "Funding Watcher daily cadence is a design assumption, not a requirement. Weekly digest: $0.30 -> $0.07.",
+      "Web search calls billed per search if Anthropic's web_search tool is used (~$0.05-0.10/search).",
+      "Google API costs (Sheets, Gmail, Calendar, Docs, Drive, Slides) are $0 at VCW volume.",
+      "Apps Script execution time is unmetered (6-min quota is an engineering issue, not a cost issue).",
+      "Gmail Reader output is shared across products per model-cost-map.md control rule 1; cost attributed to Event Ops.",
+      "Approval gate, sheet writer, drift detector contribute $0 (deterministic Python).",
+      "Workspace Framework runtime is $0 (no paid model calls).",
+      "Sponsor Prospector and Outreach Warm Intro Finder are the two unbounded call sites; watch in cost tracker.",
+      "the operator's revise-loop habit is a real variable; 3 -> 6 revise rounds doubles the Newsletter product line.",
+      "One-time eval and backfill runs are separate; use Batch API for those (50% discount).",
+      "Output tokens are estimated against typical draft length, not API MAX_TOKENS cap.",
+      "JSON overhead is folded in at ~15% on top of the 4 chars/token base rate.",
+      "Char-to-token rate of 4:1 matches the audit; prose is closer to 3.5:1, JSON-heavy closer to 4.5:1.",
+      "These numbers do not include Workspace Admin's labor or Codex/Claude Code IDE seat costs."
+    ],
+    "what_this_changes": [
+      "02-quick-wins row 4 (prompt caching) rises in priority \u2014 benefits every Sonnet site across all 6 products.",
+      "02-quick-wins row 10 (input-hash cache) rises \u2014 Confirmation Tracker, Funding Watcher, reader reuse.",
+      "03-model-migration should be expanded to cover Newsletter Revise rounds (Haiku candidate).",
+      "05-tooling item 1 (Cost Tracker) is now urgent \u2014 six contributors instead of one make the bill opaque.",
+      "05-tooling item 6 (Model Router) rises \u2014 Sponsor Prospector and Warm Intro Finder both benefit from two-stage routing."
+    ],
+    "update_triggers": [
+      "A new product joins the workboard.",
+      "A product's cadence changes (e.g., newsletter goes weekly).",
+      "Anthropic pricing changes \u2014 refresh model-cost-map.md first, then re-run math.",
+      "A Specced skill becomes Live \u2014 replace its 'inferred' line with measured prompt sizes from the script.",
+      "cost-tracker ships \u2014 replace every inferred line with measured values."
+    ]
+  },
+  "learning": [
+    "cheap AI reads routine updates; stronger AI is reserved for judgment-heavy work",
+    "every risky change needs explicit approval before it touches a live system",
+    "stale protection blocks writes when sheet values changed since the dashboard last checked",
+    "AI helpers pass reviewed work forward one step at a time"
+  ],
+  "notes": [
+    "venue outreach tracker: 3 rows ready, awaiting approval before send",
+    "newsletter workflow: 19 historical drafts exist; cadence decision is still needed before regular sends",
+    "Events Master Sheet header row is row 7 (rows 1 to 5 are yearly summary)",
+    "approval gate live-tested 2026-04-29: digest 38, 3 approved + 1 rejected",
+    "Stef guest classification flow: scripts/classify_stef_guests.py and update_guest_sheet.py"
+  ],
+  "projects": [
+    {
+      "name": "event-ops",
+      "type": "workstream",
+      "status": "active",
+      "description": "Four-stage pipeline: gmail-reader, telegram-reader, event-classifier, sheet-writer with human-in-the-loop approval gate. Validated against Events Master Sheet.",
+      "next_move": "cron schedule twice daily once stability confirmed",
+      "last_touched": "2026-05-08",
+      "path": "./workspace-framework/skills/event-ops/",
+      "tags": [
+        "pipeline",
+        "haiku",
+        "sonnet",
+        "sheets",
+        "telegram"
+      ]
+    },
+    {
+      "name": "venue-workstream",
+      "type": "workstream",
+      "status": "active",
+      "description": "Venue scout + memory + outreach tracker + Gmail reply tracker. Currently ranking 3 venues for flagship dinner.",
+      "next_move": "send Venue Alpha draft after approval, watch reply",
+      "last_touched": "2026-04-30",
+      "path": "./workspace-framework/skills/venue/",
+      "tags": [
+        "sonnet",
+        "fixtures",
+        "luma-memory",
+        "gmail-drafts"
+      ]
+    },
+    {
+      "name": "newsletter-v11",
+      "type": "automation",
+      "status": "paused",
+      "description": "Google Sheets + Apps Script newsletter generator. Voice rules, Luma scraping, hyperlinks tab, feedback learning, Doc publishing. 19 versioned drafts.",
+      "next_move": "decide cadence, ship 3 issue test, unpause",
+      "last_touched": "2026-05-06",
+      "path": "./workspace-framework/apps-script/",
+      "tags": [
+        "apps-script",
+        "beehiiv",
+        "claude-haiku",
+        "sheets"
+      ]
+    },
+    {
+      "name": "sandbox-demo",
+      "type": "sandbox",
+      "status": "active",
+      "description": "Separate local sandbox with fake Gmail, Telegram, Relay CRM, Luma, content-status, and Events Sheet fixtures. Safe testing space, never live ops.",
+      "next_move": "wire VC demo script into a click-through walkthrough",
+      "last_touched": "2026-05-03",
+      "path": "./workspace-framework/sandbox/",
+      "tags": [
+        "sandbox",
+        "safe-test",
+        "fixtures",
+        "html",
+        "no-write"
+      ]
+    },
+    {
+      "name": "speaker-prep-workstream",
+      "type": "workstream",
+      "status": "paused",
+      "description": "Speaker prep doc copier, bio fetcher, panel question generator, briefing drafter, prep-call scheduler. Scaffold exists.",
+      "next_move": "build after venue workstream proves out",
+      "last_touched": "2026-04-29",
+      "path": "./workspace-framework/skills/speaker-prep/",
+      "tags": [
+        "scaffold",
+        "sonnet",
+        "haiku"
+      ]
+    },
+    {
+      "name": "sponsors-workstream",
+      "type": "workstream",
+      "status": "paused",
+      "description": "Sponsor prospector, fit scorer, funding watcher, onepager generator, cold-outreach drafter, renewal prompter. Scaffold exists.",
+      "next_move": "specced in docs/issues/workstream-3-sponsors.md",
+      "last_touched": "2026-04-29",
+      "path": "./workspace-framework/skills/sponsors/",
+      "tags": [
+        "scaffold",
+        "sponsors",
+        "funding-watcher"
+      ]
+    },
+    {
+      "name": "outreach-workstream",
+      "type": "workstream",
+      "status": "paused",
+      "description": "Stale relationship detector, contact ranker, mail merger, reply monitor. Overlaps with career-ops.",
+      "next_move": "specced; build after sponsors",
+      "last_touched": "2026-04-29",
+      "path": "./workspace-framework/skills/outreach/",
+      "tags": [
+        "scaffold",
+        "crm",
+        "cadence"
+      ]
+    },
+    {
+      "name": "framework-spine",
+      "type": "framework",
+      "status": "active",
+      "description": "Shared primitives: approval-gate, queue-manager, drift-detector, confidence-scorer, sheets-reader/writer, gmail-reader/drafter, telegram-reader/notifier, voice-rules-loader, eval-runner, cost-tracker.",
+      "next_move": "extract framework helpers into a /framework dir",
+      "last_touched": "2026-05-06",
+      "path": "./workspace-framework/skills/framework/",
+      "tags": [
+        "scaffold",
+        "primitives",
+        "audit"
+      ]
+    },
+    {
+      "name": "trial-product-runs",
+      "type": "experiment",
+      "status": "active",
+      "description": "Local model and LM Studio experiments. OpenAI-compatible endpoint switching via .env.local.",
+      "next_move": "benchmark llama3.1:8b vs Haiku on gmail-reader extraction",
+      "last_touched": "2026-05-03",
+      "path": "./workspace-framework/trial-product-runs/",
+      "tags": [
+        "lm-studio",
+        "local-llm",
+        "bench"
+      ]
+    },
+    {
+      "name": "stef-guest-classifier",
+      "type": "automation",
+      "status": "active",
+      "description": "Classify guests by tier from Luma exports, update Events Master Sheet attendee tab.",
+      "next_move": "wire into pipeline after next event guest export",
+      "last_touched": "2026-05-08",
+      "path": "./workspace-framework/scripts/classify_stef_guests.py",
+      "tags": [
+        "luma",
+        "sheets",
+        "classifier"
+      ]
+    },
+    {
+      "name": "luma-history-pull",
+      "type": "tool",
+      "status": "shipped",
+      "description": "Pull approved Luma event history into venue + speaker + sponsor memory. Backbone of memory layer.",
+      "next_move": "schedule nightly via launchd",
+      "last_touched": "2026-04-29",
+      "path": "./workspace-framework/scripts/pull_luma_events.py",
+      "tags": [
+        "luma",
+        "memory",
+        "nightly"
+      ]
+    },
+    {
+      "name": "venue-memory-builder",
+      "type": "tool",
+      "status": "shipped",
+      "description": "Build venue memory sheet from Luma history. Includes neighborhood, capacity, prior usage, contact.",
+      "next_move": "refresh after every approved Luma pull",
+      "last_touched": "2026-04-29",
+      "path": "./workspace-framework/scripts/build_venue_memory.py",
+      "tags": [
+        "venue",
+        "memory",
+        "luma"
+      ]
+    },
+    {
+      "name": "workspace-dashboard",
+      "type": "ops",
+      "status": "active",
+      "description": "Team dashboard for the Venture Community Workspace. Reads state.json. Master view of workstreams, AI helpers, automations, human loop, ideas, retros, and team pulse.",
+      "next_move": "wire nightly cron to refresh queue/automations from disk",
+      "last_touched": "2026-05-14",
+      "path": "./workspace-dashboard/",
+      "tags": [
+        "self",
+        "dashboard",
+        "swift"
+      ]
+    },
+    {
+      "name": "newsletter-auto",
+      "type": "automation",
+      "status": "paused",
+      "description": "Standalone Beehiiv newsletter automation in /dev/newsletter-auto. Paused pending content strategy.",
+      "next_move": "decide cadence, fold into v11 Apps Script or kill",
+      "last_touched": "2026-04-22",
+      "path": "./newsletter-automation/",
+      "tags": [
+        "beehiiv",
+        "agent",
+        "paused"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Google Sheets",
+      "category": "data",
+      "purpose": "Events Master Sheet, Venue Memory, Newsletter Workflow. Source of truth.",
+      "url": "#/sources"
+    },
+    {
+      "name": "Gmail",
+      "category": "comms",
+      "purpose": "Conversation surface, draft surface, reply tracker. Read once, route to skills, drafts only.",
+      "url": "https://mail.google.com"
+    },
+    {
+      "name": "Telegram",
+      "category": "comms",
+      "purpose": "Team channel signal source and approval-gate UI. Bot sends digests, parses approve/reject replies.",
+      "url": "https://telegram.org"
+    },
+    {
+      "name": "Luma",
+      "category": "events",
+      "purpose": "Event history, RSVP signups, checkins. Source for venue memory and attendee classification.",
+      "url": "https://lu.ma"
+    },
+    {
+      "name": "Relay CRM",
+      "category": "crm",
+      "purpose": "Contact source of truth for people, firms, relationships, and outreach status.",
+      "url": null
+    },
+    {
+      "name": "Beehiiv",
+      "category": "newsletter",
+      "purpose": "community newsletter publishing platform. Final destination for v11 Apps Script drafts.",
+      "url": "https://beehiiv.com"
+    },
+    {
+      "name": "Google Apps Script",
+      "category": "automation",
+      "purpose": "Runtime for the newsletter v11 generator. Drives Sheets, Gmail, Drive, Claude calls.",
+      "url": "https://script.google.com"
+    },
+    {
+      "name": "Google Drive",
+      "category": "data",
+      "purpose": "Doc storage for newsletter drafts, prep docs, sponsor one-pagers.",
+      "url": "https://drive.google.com"
+    },
+    {
+      "name": "Google Calendar",
+      "category": "calendar",
+      "purpose": "Schedule prep calls, event blocks, sponsor meetings. Draft-only for now.",
+      "url": "https://calendar.google.com"
+    },
+    {
+      "name": "Google Docs",
+      "category": "docs",
+      "purpose": "Drafted speaker briefs, venue logistics, sponsor one-pagers.",
+      "url": "https://docs.google.com"
+    },
+    {
+      "name": "Anthropic API",
+      "category": "llm",
+      "purpose": "Claude Sonnet for judgment, Haiku for extraction. Used by every reasoning agent.",
+      "url": "https://anthropic.com"
+    },
+    {
+      "name": "Claude Code",
+      "category": "ai-cli",
+      "purpose": "Local agentic CLI driving skills + scripts in workspace-framework.",
+      "url": "https://claude.ai/code"
+    },
+    {
+      "name": "Ollama",
+      "category": "local-llm",
+      "purpose": "Local backend for trial-product-runs and free-tier fallback.",
+      "url": "https://ollama.ai"
+    },
+    {
+      "name": "LM Studio",
+      "category": "local-llm",
+      "purpose": "OpenAI-compatible local model server. Switched via ELA_LLM_PROVIDER.",
+      "url": "https://lmstudio.ai"
+    },
+    {
+      "name": "Python 3.12",
+      "category": "runtime",
+      "purpose": "/opt/homebrew/bin/python3.12 runs every pipeline script and orchestrator.",
+      "url": null
+    },
+    {
+      "name": "clasp",
+      "category": "dev-tool",
+      "purpose": "Apps Script CLI for local development of Code-v11.gs.",
+      "url": "https://github.com/google/clasp"
+    },
+    {
+      "name": "GitHub",
+      "category": "code-hosting",
+      "purpose": "Repo hosting for workspace-framework, issues, public refactor target.",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Crunchbase",
+      "category": "research",
+      "purpose": "Sponsor funding watcher signal source.",
+      "url": "https://crunchbase.com"
+    },
+    {
+      "name": "TechCrunch",
+      "category": "research",
+      "purpose": "Sponsor funding announcement source.",
+      "url": "https://techcrunch.com"
+    },
+    {
+      "name": "LinkedIn",
+      "category": "social",
+      "purpose": "Speaker bio source, newsletter-v11 LinkedIn post output channel.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "name": "X (Twitter)",
+      "category": "social",
+      "purpose": "Speaker bio / sponsor signal source, newsletter recap channel.",
+      "url": "https://x.com"
+    },
+    {
+      "name": "Notion",
+      "category": "docs",
+      "purpose": "Pod docs, future newsletter mirror, ad-hoc planning.",
+      "url": "https://notion.so"
+    },
+    {
+      "name": "Slack",
+      "category": "comms",
+      "purpose": "Future internal channel option, not yet wired.",
+      "url": null
+    },
+    {
+      "name": "Stripe",
+      "category": "payments",
+      "purpose": "Ticket payment status, future Event Fit + Attendee Approval flow.",
+      "url": "https://stripe.com"
+    },
+    {
+      "name": "Airtable",
+      "category": "crm",
+      "purpose": "Secondary contact store, Relay CRM mirror candidate.",
+      "url": "https://airtable.com"
+    },
+    {
+      "name": "n8n",
+      "category": "automation",
+      "purpose": "Workflow automation runtime, relay_hitl_doc workflow.",
+      "url": "https://n8n.io"
+    },
+    {
+      "name": "launchd",
+      "category": "scheduler",
+      "purpose": "macOS-native cron alternative for nightly pulls.",
+      "url": null
+    },
+    {
+      "name": "cron",
+      "category": "scheduler",
+      "purpose": "Twice-daily event-ops pipeline schedule.",
+      "url": null
+    },
+    {
+      "name": "GitHub Issues",
+      "category": "issue-tracker",
+      "purpose": "Issue inventory in docs/issues/ tracks workstream progress.",
+      "url": null
+    },
+    {
+      "name": "Operator Mac",
+      "category": "host",
+      "purpose": "Operator host. Runs Python, Apps Script tooling, dashboard, and launch agents.",
+      "url": null
+    }
+  ],
+  "premium_stack": [
+    {
+      "name": "Google Workspace",
+      "tier": "Workspace",
+      "status": "likely active",
+      "confidence": "pretty sure",
+      "owner": "community team",
+      "includes": [
+        "Gmail",
+        "Google Drive",
+        "Google Docs",
+        "Google Sheets",
+        "Google Calendar",
+        "Apps Script"
+      ],
+      "purpose": "Core operating suite for sheets, docs, email drafts, calendar prep, and dashboard source files.",
+      "next_check": "Confirm plan/admin details if billing-level visibility is needed.",
+      "url": "https://workspace.google.com"
+    },
+    {
+      "name": "Luma Plus",
+      "tier": "Plus",
+      "status": "likely active",
+      "confidence": "pretty sure",
+      "owner": "community team",
+      "includes": [
+        "Event pages",
+        "RSVP management",
+        "Attendee exports",
+        "Event history"
+      ],
+      "purpose": "Event hosting and history source for venue memory, attendee context, newsletter pulls, and recap workflows.",
+      "next_check": "Confirm exact plan and renewal owner in Luma billing.",
+      "url": "https://lu.ma"
+    },
+    {
+      "name": "Beehiiv Plus",
+      "tier": "Plus",
+      "status": "likely active",
+      "confidence": "pretty sure",
+      "owner": "community team",
+      "includes": [
+        "Newsletter publishing",
+        "Audience management",
+        "Analytics",
+        "Growth tools"
+      ],
+      "purpose": "Final publishing surface for the community newsletter automation and approved issue drafts.",
+      "next_check": "Confirm plan name, billing owner, and renewal timing in Beehiiv.",
+      "url": "https://beehiiv.com"
+    },
+    {
+      "name": "Granola Premium",
+      "tier": "Premium",
+      "status": "needs confirmation",
+      "confidence": "ask owner",
+      "owner": "owner",
+      "includes": [
+        "Meeting notes",
+        "Context capture",
+        "Follow-up extraction"
+      ],
+      "purpose": "Potential meeting-memory source for team context, follow-ups, and dashboard status updates.",
+      "next_check": "Confirm whether the team's Granola account is Premium and whether VCW can use the meeting context.",
+      "url": "https://www.granola.ai"
+    }
+  ],
+  "agents": [
+    {
+      "name": "gmail-reader",
+      "display_name": "Gmail Reader",
+      "kind": "haiku",
+      "category": "event-ops",
+      "purpose": "Parse inbox threads and extract event-related signal as structured JSON.",
+      "when_to_use": "Start of event-ops pipeline, twice daily, to surface event signal from Gmail.",
+      "not_for": "Drafting or sending mail. Read-only inbox scan.",
+      "alias": null
+    },
+    {
+      "name": "telegram-reader",
+      "display_name": "Telegram Reader",
+      "kind": "haiku",
+      "category": "event-ops",
+      "purpose": "Extract mentions, decisions, and event signal from the team Telegram channel.",
+      "when_to_use": "Run in parallel with gmail-reader at pipeline start.",
+      "not_for": "Sending Telegram messages. That is telegram-notifier.",
+      "alias": null
+    },
+    {
+      "name": "event-classifier",
+      "display_name": "Event Classifier",
+      "kind": "sonnet",
+      "category": "event-ops",
+      "purpose": "Fuzzy-match inbox signal to existing Events Master Sheet rows. Proposes cell-level updates with confidence scores.",
+      "when_to_use": "Stage 3 of the pipeline. Reads both readers + the sheet snapshot.",
+      "not_for": "Writing to the sheet. Proposes only.",
+      "alias": null
+    },
+    {
+      "name": "sheet-writer",
+      "display_name": "Sheet Writer",
+      "kind": "deterministic",
+      "category": "event-ops",
+      "purpose": "Apply human-approved proposals to the Events Master Sheet with drift detection and audit logging.",
+      "when_to_use": "Only after approval-gate signs off. No LLM used.",
+      "not_for": "Making decisions. Pure execution from validated proposals.",
+      "alias": null
+    },
+    {
+      "name": "approval-gate",
+      "display_name": "Approval Gate",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Build approval digests and parse approve/reject replies from Telegram.",
+      "when_to_use": "Between event-classifier and sheet-writer. Every write goes through it.",
+      "not_for": "Auto-approving. Always waits on explicit human reply.",
+      "alias": null
+    },
+    {
+      "name": "drift-detector",
+      "display_name": "Stale Protection Checker",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Block writes when live values changed since the dashboard last checked.",
+      "when_to_use": "Before every sheet-writer write. Protects manual edits.",
+      "not_for": "Resolving conflicts. Just logs and skips.",
+      "alias": null
+    },
+    {
+      "name": "confidence-scorer",
+      "display_name": "Confidence Scorer",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Standard confidence scoring and per-field floors. Triages the approval queue.",
+      "when_to_use": "After classifier proposes. Tags every write with a score.",
+      "not_for": "Approving anything. Just numerical scoring.",
+      "alias": null
+    },
+    {
+      "name": "venue-matcher",
+      "display_name": "Venue Matcher",
+      "kind": "sonnet",
+      "category": "venue",
+      "purpose": "Rank venues against event needs (size, neighborhood, prior use, vibe). Returns top 3 with rationale.",
+      "when_to_use": "Given an event row needing a venue. Reads venue memory.",
+      "not_for": "Sending outreach. Suggestions only.",
+      "alias": null
+    },
+    {
+      "name": "venue-outreach-drafter",
+      "display_name": "Venue Outreach Drafter",
+      "kind": "haiku",
+      "category": "venue",
+      "purpose": "Draft a booking inquiry email tailored to the venue. Gmail draft only.",
+      "when_to_use": "After venue-matcher returns top 3 and operator picks the target.",
+      "not_for": "Sending. Draft sits in Gmail waiting for human send.",
+      "alias": null
+    },
+    {
+      "name": "venue-confirmation-tracker",
+      "display_name": "Venue Confirmation Tracker",
+      "kind": "haiku",
+      "category": "venue",
+      "purpose": "Watch Gmail for venue replies. Classify confirmed, declined, asking, ghosted.",
+      "when_to_use": "After outreach is sent. Surfaces non-confirmed past 5 days.",
+      "not_for": "Negotiating. Surfaces state, never replies.",
+      "alias": null
+    },
+    {
+      "name": "venue-prospect-finder",
+      "display_name": "Venue Prospect Finder",
+      "kind": "sonnet",
+      "category": "venue",
+      "purpose": "Web research for new venue candidates by neighborhood and capacity.",
+      "when_to_use": "When venue memory has no good match for an event need.",
+      "not_for": "Replacing memory. Augments only when memory is thin.",
+      "alias": null
+    },
+    {
+      "name": "sponsor-prospector",
+      "display_name": "Sponsor Prospector",
+      "kind": "sonnet",
+      "category": "sponsors",
+      "purpose": "Find new sponsor candidates from web and CRM context.",
+      "when_to_use": "When the sponsor funnel is thin and the next event needs lift.",
+      "not_for": "Cold sending. Surface candidates only.",
+      "alias": null
+    },
+    {
+      "name": "sponsor-fit-scorer",
+      "display_name": "Sponsor Fit Scorer",
+      "kind": "sonnet",
+      "category": "sponsors",
+      "purpose": "Rank sponsor prospects: industry fit, funding, audience overlap, community marketing intent.",
+      "when_to_use": "After sponsor-prospector returns candidates.",
+      "not_for": "Reaching out. Scoring only.",
+      "alias": null
+    },
+    {
+      "name": "sponsor-funding-watcher",
+      "display_name": "Sponsor Funding Watcher",
+      "kind": "haiku",
+      "category": "sponsors",
+      "purpose": "Daily scan of TechCrunch, Crunchbase, X for funding announcements that hint at sponsor warmth.",
+      "when_to_use": "Nightly. Flags warm trigger moments for the pod.",
+      "not_for": "Acting on news. Surface only.",
+      "alias": null
+    },
+    {
+      "name": "sponsor-cold-outreach-drafter",
+      "display_name": "Sponsor Cold Outreach Drafter",
+      "kind": "haiku",
+      "category": "sponsors",
+      "purpose": "First-touch sponsor email with warm reference, subject variants.",
+      "when_to_use": "After fit scoring and approval to draft.",
+      "not_for": "Sending. Draft sits for human review.",
+      "alias": null
+    },
+    {
+      "name": "speaker-bio-fetcher",
+      "display_name": "Speaker Bio Fetcher",
+      "kind": "haiku",
+      "category": "speaker-prep",
+      "purpose": "Fetch speaker bio from approved sources (LinkedIn, company About, X profile). Structured bio with confidence.",
+      "when_to_use": "After speaker is confirmed and prep doc is copied.",
+      "not_for": "Guessing. Returns confidence + sources.",
+      "alias": null
+    },
+    {
+      "name": "panel-question-generator",
+      "display_name": "Panel Question Generator",
+      "kind": "sonnet",
+      "category": "speaker-prep",
+      "purpose": "Draft 5 to 8 panel questions tailored to topic, bio, audience.",
+      "when_to_use": "After bio is filled. Output goes into the prep doc.",
+      "not_for": "Final questions. Always reviewed by the moderator.",
+      "alias": null
+    },
+    {
+      "name": "briefing-email-drafter",
+      "display_name": "Briefing Email Drafter",
+      "kind": "haiku",
+      "category": "speaker-prep",
+      "purpose": "Draft the speaker briefing email: logistics, format, talking points, day-of contact.",
+      "when_to_use": "T-7 days from event. Tone-matched to the speaker.",
+      "not_for": "Sending. Draft only.",
+      "alias": null
+    },
+    {
+      "name": "stale-relationship-detector",
+      "display_name": "Stale Relationship Detector",
+      "kind": "haiku",
+      "category": "outreach",
+      "purpose": "Flag contacts past cadence threshold (founders 30d, investors 60d, casual 90d).",
+      "when_to_use": "Weekly. Drives the outreach digest.",
+      "not_for": "Auto-emailing. Surfaces names only.",
+      "alias": null
+    },
+    {
+      "name": "contact-ranker",
+      "display_name": "Contact Ranker",
+      "kind": "sonnet",
+      "category": "outreach",
+      "purpose": "Rank contacts by goal fit, relationship strength, recency. Per-contact rationale.",
+      "when_to_use": "Given a goal: e.g. 'find 10 contacts who can intro me to crypto seed funds.'",
+      "not_for": "Cold outreach. Ranks warm and stale CRM only.",
+      "alias": null
+    },
+    {
+      "name": "reply-monitor",
+      "display_name": "Reply Monitor",
+      "kind": "haiku",
+      "category": "outreach",
+      "purpose": "Watch Gmail for replies, classify positive/negative/neutral/off-topic, propose CRM updates.",
+      "when_to_use": "Daily after outreach drafts get sent.",
+      "not_for": "Replying. Surfaces classification + CRM patch only.",
+      "alias": null
+    },
+    {
+      "name": "weekly-digest-builder",
+      "display_name": "Weekly Digest Builder",
+      "kind": "haiku",
+      "category": "meta",
+      "purpose": "Compose the Monday update across workstreams: event ops, venues, sponsors, speakers, outreach.",
+      "when_to_use": "Sunday night. Goes to Telegram + Gmail draft.",
+      "not_for": "Strategy. Roll-up only.",
+      "alias": null
+    },
+    {
+      "name": "skill-router",
+      "display_name": "Skill Router",
+      "kind": "haiku",
+      "category": "meta",
+      "purpose": "Route unstructured operator requests to the right skill (event-ops vs venue vs sponsors etc).",
+      "when_to_use": "When a pod member fires a free-text request at the workspace.",
+      "not_for": "Executing. Just routing.",
+      "alias": null
+    },
+    {
+      "name": "cost-tracker",
+      "display_name": "Cost Tracker",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Track LLM spend per skill per month. Used for the pipeline KPI.",
+      "when_to_use": "Every pipeline run. Appends to a cost log.",
+      "not_for": "Stopping runs. Reporting only.",
+      "alias": null
+    },
+    {
+      "name": "eval-runner",
+      "display_name": "Eval Runner",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Run sanitized fixtures and score outputs against golden answers.",
+      "when_to_use": "Before every skill version bump.",
+      "not_for": "Production. Test rig only.",
+      "alias": null
+    },
+    {
+      "name": "secret-loader",
+      "display_name": "Secret Loader",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Read secrets from .env.local without ever logging values.",
+      "when_to_use": "Start of every script. Redaction-aware.",
+      "not_for": "Browser. Local only.",
+      "alias": null
+    },
+    {
+      "name": "voice-rules-loader",
+      "display_name": "Voice Rules Loader",
+      "kind": "deterministic",
+      "category": "framework",
+      "purpose": "Load community voice rules into every prompt that drafts copy.",
+      "when_to_use": "Start of every drafting skill.",
+      "not_for": "Generating copy. Just inserts the rules.",
+      "alias": null
+    },
+    {
+      "name": "entity-resolver",
+      "display_name": "Entity Resolver",
+      "kind": "haiku",
+      "category": "meta",
+      "purpose": "Resolve people and companies across CRM, Gmail, Telegram. Dedupe with confidence.",
+      "when_to_use": "Anywhere a name needs to map back to a CRM contact.",
+      "not_for": "Creating CRM entries. Just resolving.",
+      "alias": null
+    },
+    {
+      "name": "newsletter-status-reader",
+      "display_name": "Newsletter Status Reader",
+      "kind": "deterministic",
+      "category": "content",
+      "purpose": "Read-only adapter exposing newsletter v11 state (current issue, draft status, missing links, feedback).",
+      "when_to_use": "Read whenever you need to know if the newsletter is in flight.",
+      "not_for": "Rebuilding the newsletter. Wraps the existing Apps Script.",
+      "alias": null
+    },
+    {
+      "name": "promotion-hold-checker",
+      "display_name": "Promotion Hold Checker",
+      "kind": "haiku",
+      "category": "content",
+      "purpose": "Pre-publish blocker for events missing venue, pricing, ticketing, partner approval, audience clarity.",
+      "when_to_use": "Before newsletter draft includes a featured event.",
+      "not_for": "Sending. Blocks only.",
+      "alias": null
+    },
+    {
+      "name": "Operator-vc-owner-evaluator",
+      "display_name": "Operator VC Check",
+      "kind": "persona",
+      "category": "operator-review",
+      "purpose": "Read the dashboard like a busy nontechnical VC founder. Return only what is confusing, risky to click, or missing a clear next action.",
+      "when_to_use": "Before demos or UI changes. Ask for a short list: unclear label, why it matters, and simpler wording or placement.",
+      "not_for": "Code, strategy, live approvals, or long rationale. Operator only points out confusion and cleanup.",
+      "alias": "Operator"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Events Master Sheet",
+      "kind": "google-sheet",
+      "purpose": "Single source of truth for every event the pod runs. Columns B to AC schema in state/source-of-truth.md.",
+      "location": "#/sources",
+      "next_move": "Snapshot pulled live by scripts/pull_snapshot.py, status enums Idea/Plan/Done."
+    },
+    {
+      "name": "Community Newsletter Workflow Sheet",
+      "kind": "google-sheet",
+      "purpose": "Backing sheet for the Apps Script newsletter v11 generator. Generate, Elements, Log, Feedback tabs.",
+      "location": "#/sources",
+      "next_move": "Dashboard now points at Generate tab; confirm the live sheet matches the reviewed workflow."
+    },
+    {
+      "name": "Venue Memory Sheet",
+      "kind": "google-sheet",
+      "purpose": "Venue catalog: capacity, neighborhood, prior usage, contact, pricing tier. Built from Luma history.",
+      "location": "Sheet built by scripts/upload_venue_memory_sheet.py",
+      "next_move": "Refresh after every approved Luma pull."
+    },
+    {
+      "name": "Gmail inbox",
+      "kind": "email",
+      "purpose": "Operator conversation surface. Read by gmail-reader, drafts authored by drafters.",
+      "location": "Workspace Admin via Gmail API",
+      "next_move": "Keep read-once contract; never auto-reply."
+    },
+    {
+      "name": "Telegram team channel",
+      "kind": "messaging",
+      "purpose": "Pod signal source and approval-gate UI. Telegram reader extracts mentions; approval gate digests sit there.",
+      "location": "Telegram bot Venture Community Workspace via scripts/run_approval_gate.py",
+      "next_move": "Confirm bot token rotation cadence."
+    },
+    {
+      "name": "Luma event history",
+      "kind": "api",
+      "purpose": "Approved event history. Drives venue memory and attendee classifier.",
+      "location": "Luma API via scripts/pull_luma_events.py",
+      "next_move": "Schedule nightly via launchd."
+    },
+    {
+      "name": "Relay CRM",
+      "kind": "crm",
+      "purpose": "Contact source of truth: people, firms, relationships, outreach status.",
+      "location": "Relay account, accessed via planned relay-crm-reader",
+      "next_move": "Build read-only adapter in Phase 2 memory layer."
+    },
+    {
+      "name": "Newsletter v11 Apps Script",
+      "kind": "code",
+      "purpose": "Live newsletter generator. Voice rules, Luma scraping, hyperlinks tab, feedback learning, Doc publishing.",
+      "location": "./workspace-framework/apps-script/public-newsletter-script.gs",
+      "next_move": "Reconcile with deployed sheet; bug-inventory has the diff."
+    },
+    {
+      "name": "Review handoff files",
+      "kind": "json",
+      "purpose": "Behind-the-scenes handoff records for work waiting on review.",
+      "location": "./workspace-framework/queue/",
+      "next_move": "Use Human in the loop for decisions; keep these files as audit/debug detail."
+    },
+    {
+      "name": "Sandbox fixtures",
+      "kind": "sandbox",
+      "purpose": "Fake Gmail, Telegram, Relay CRM, Luma, Events Sheet, and content-status data for isolated sandbox runs without touching live systems.",
+      "location": "./workspace-framework/sandbox/fixtures/",
+      "next_move": "Refresh quarterly to keep demos realistic."
+    }
+  ],
+  "memory": [
+    {
+      "name": "memory-log",
+      "type": "project",
+      "description": "Running record of corrections, preferences, learnings across sessions. Approval gate live-tested 2026-04-29; pipeline orchestrator validated.",
+      "path": "./workspace-framework/memory/memory.md"
+    },
+    {
+      "name": "CLAUDE-md",
+      "type": "feedback",
+      "description": "Operating rules: Haiku for read/relay, Sonnet only for judgment, human approval for every dangerous write, no em-dashes.",
+      "path": "./workspace-framework/memory/CLAUDE.md"
+    },
+    {
+      "name": "source-of-truth-events",
+      "type": "reference",
+      "description": "Events Master Sheet schema: header row 7, data row 8+, columns B to AC with status enums Idea/Plan/Done.",
+      "path": "./workspace-framework/state/source-of-truth.md"
+    },
+    {
+      "name": "product-ops-registry",
+      "type": "reference",
+      "description": "Cross-workstream shared auth (LLM, Google, Telegram), common tab schemas (intake/queue/log/feedback), default policies (writes_require_approval=true).",
+      "path": "./workspace-framework/state/product-ops-registry.json"
+    },
+    {
+      "name": "ideas-inventory",
+      "type": "project",
+      "description": "Full disk scan of 97 skills across 8 phases plus 13 proposals from transcripts. Status: live, executing, specced, future, paused.",
+      "path": "./workspace-framework/docs/ideas-inventory/inventory-2026-05-14.md"
+    },
+    {
+      "name": "bug-inventory",
+      "type": "feedback",
+      "description": "Known v11 newsletter bugs and resolved items. Cross-reference before fixing any 'documented' quirk.",
+      "path": "./workspace-framework/docs/newsletter-sop/bug-inventory.md"
+    }
+  ],
+  "ideas": [
+    {
+      "name": "event-fit-attendee-approval",
+      "title": "Event Fit + Attendee Approval",
+      "category": "event-ops",
+      "description": "Take Luma registrations, payment status, audience rules, produce an approval queue with rationale.",
+      "source": "docs/proposals/public-product-notes.md",
+      "status": "specced",
+      "effort": "M",
+      "next_step": "build after venue workstream ships"
+    },
+    {
+      "name": "partner-decision-email-drafter",
+      "title": "Partner Decision Email Drafter",
+      "category": "event-ops",
+      "description": "Group open decisions (venue, pricing, fit, speaker) into a review email with a deadline.",
+      "source": "docs/proposals/public-product-notes.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "specced; queue after venue workstream"
+    },
+    {
+      "name": "promotion-hold-checker",
+      "title": "Promotion Hold Checker",
+      "category": "content",
+      "description": "Pre-publish blocker for events missing venue, pricing, ticketing, partner approval, audience clarity.",
+      "source": "docs/proposals/newsletter-automation-adapter.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "wire into newsletter v11 unpausing"
+    },
+    {
+      "name": "newsletter-context-router",
+      "title": "Newsletter Context Router",
+      "category": "content",
+      "description": "Route event, venue, sponsor context into newsletter via queue. No direct writes.",
+      "source": "docs/proposals/newsletter-automation-adapter.md",
+      "status": "specced",
+      "effort": "M",
+      "next_step": "build alongside newsletter unpause"
+    },
+    {
+      "name": "shared-voice-rule-loader",
+      "title": "Shared Voice Rule Loader",
+      "category": "content",
+      "description": "Convert Elements tab rules into versioned markdown for reuse across workstreams.",
+      "source": "docs/proposals/newsletter-automation-adapter.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "extract Elements tab into voice-rules.md"
+    },
+    {
+      "name": "recurring-event-handler-S043",
+      "title": "Recurring Event Handler (S043)",
+      "category": "event-ops",
+      "description": "Auto-detect recurring patterns, pre-fill the next instance, mark for confirmation.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "Phase 3 productionization"
+    },
+    {
+      "name": "status-progressor-S044",
+      "title": "Status Progressor (S044)",
+      "category": "event-ops",
+      "description": "Auto-flip Plan to Confirmed when locked, then to Past 24h after event end.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "Phase 3 productionization"
+    },
+    {
+      "name": "date-collision-detector-S042",
+      "title": "Date Collision Detector (S042)",
+      "category": "event-ops",
+      "description": "Flag two events same day or within 4 hours, surface with prior commitment history.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "Phase 3 productionization"
+    },
+    {
+      "name": "venue-day-of-doc-builder-S053",
+      "title": "Venue Day-of Doc Builder (S053)",
+      "category": "venue",
+      "description": "Generate logistics doc: load-in, AV, contact, address, parking.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "Phase 4 build"
+    },
+    {
+      "name": "speaker-prep-gap-detector-S062",
+      "title": "Speaker Prep Gap Detector (S062)",
+      "category": "speaker-prep",
+      "description": "Flag missing bio, photo, prep call, briefing 7 days out.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "future",
+      "effort": "S",
+      "next_step": "Phase 5 build"
+    },
+    {
+      "name": "sponsor-roi-reporter-S075",
+      "title": "Sponsor ROI Reporter (S075)",
+      "category": "sponsors",
+      "description": "Per sponsor per event: attendance, demos, reach, social mentions.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "future",
+      "effort": "M",
+      "next_step": "Phase 6 build"
+    },
+    {
+      "name": "stale-relationship-detector-S079",
+      "title": "Stale Relationship Detector (S079)",
+      "category": "outreach",
+      "description": "Flag contacts past cadence threshold (founders 30d, investors 60d, casual 90d).",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "future",
+      "effort": "S",
+      "next_step": "Phase 7 build"
+    },
+    {
+      "name": "warm-intro-finder-S086",
+      "title": "Warm Intro Finder (S086)",
+      "category": "outreach",
+      "description": "Scan CRM for shared connections to target, surface 'you both know X'.",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "status": "future",
+      "effort": "M",
+      "next_step": "Phase 7 build"
+    },
+    {
+      "name": "weekly-digest-builder",
+      "title": "Weekly Digest Builder",
+      "category": "meta",
+      "description": "Compose Monday update across workstreams, send to Telegram + Gmail draft.",
+      "source": "skills/skill-registry.json",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "build after Phase 4 demo"
+    },
+    {
+      "name": "skill-router",
+      "title": "Skill Router",
+      "category": "meta",
+      "description": "Route unstructured operator requests to the right skill.",
+      "source": "skills/skill-registry.json",
+      "status": "specced",
+      "effort": "S",
+      "next_step": "build after framework spine is clean"
+    }
+  ],
+  "ideas_v2": [
+    {
+      "name": "vc-walkthrough-flow",
+      "title": "VC Demo Walkthrough Flow",
+      "category": "sandbox",
+      "description": "One-click VC demo path through sandbox: receive signal, classify, propose, approve, write, surface result. Show full HITL story.",
+      "source": "sandbox/demo/VC_DEMO_SCRIPT.md",
+      "status": "executing",
+      "effort": "S",
+      "next_step": "wire button into sandbox/demo/operator-console.html"
+    },
+    {
+      "name": "luma-quarterly-pull",
+      "title": "Luma History Quarterly Pull + Memory Refresh",
+      "category": "memory",
+      "description": "Schedule pull_luma_events.py nightly, refresh venue + speaker + sponsor memory after each approved pull.",
+      "source": "scripts/pull_luma_events.py",
+      "status": "executing",
+      "effort": "S",
+      "next_step": "wire launchd plist after dashboard lands"
+    },
+    {
+      "name": "atomic-skill-registry",
+      "title": "Atomic Skill Registry v2",
+      "category": "framework",
+      "description": "Decompose every skill into atomic primitives; route via skill-router based on intent vector.",
+      "source": "docs/issues/atomic-skill-registry.md",
+      "status": "specced",
+      "effort": "L",
+      "next_step": "spec only; defer until 3 workstreams ship"
+    }
+  ],
+  "automations": [
+    {
+      "name": "event-ops-pipeline",
+      "category": "ops",
+      "purpose": "Full event-ops pipeline: pull snapshot, gmail-reader, telegram-reader, classifier, approval gate, sheet writer, refresh snapshot.",
+      "trigger": "manual + planned cron 2x/day",
+      "runner": "scripts/run_pipeline.py",
+      "status": "active",
+      "monthly_cost": "$5-9",
+      "next_step": "schedule via cron after one more live run"
+    },
+    {
+      "name": "venue-outreach-build",
+      "category": "venue",
+      "purpose": "Build the venue outreach tracker from event + venue memory. Drafts up to 3 venue inquiry emails per event.",
+      "trigger": "manual on event needing venue",
+      "runner": "scripts/run_venue.py",
+      "status": "active",
+      "monthly_cost": "$0.30/event",
+      "next_step": "automate when a new event lands with status=Plan and no venue"
+    },
+    {
+      "name": "venue-reply-tracker",
+      "category": "venue",
+      "purpose": "Process Gmail replies for venue outreach, propose status updates and missing-field flags.",
+      "trigger": "daily",
+      "runner": "scripts/process_venue_gmail_replies.py",
+      "status": "active",
+      "monthly_cost": "<$0.10",
+      "next_step": "wire into pipeline after first live reply"
+    },
+    {
+      "name": "venue-outreach-sync",
+      "category": "venue",
+      "purpose": "Sync venue outreach tracker JSON to the operator-facing Google Sheet view.",
+      "trigger": "after every venue run",
+      "runner": "scripts/sync_venue_outreach_sheet.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "stable"
+    },
+    {
+      "name": "luma-history-pull",
+      "category": "memory",
+      "purpose": "Nightly pull of approved Luma event history into venue/speaker/sponsor memory.",
+      "trigger": "nightly cron (planned)",
+      "runner": "scripts/pull_luma_events.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "schedule via launchd"
+    },
+    {
+      "name": "venue-memory-build",
+      "category": "memory",
+      "purpose": "Build the canonical venue memory sheet from Luma history.",
+      "trigger": "after every Luma pull",
+      "runner": "scripts/build_venue_memory.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "stable"
+    },
+    {
+      "name": "approval-gate-telegram",
+      "category": "framework",
+      "purpose": "Telegram digest of pending proposals; parses approve/reject replies; routes outcomes back to writer.",
+      "trigger": "after classifier proposes",
+      "runner": "scripts/run_approval_gate.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "stable; reliability fix landed 2026-04-29"
+    },
+    {
+      "name": "sandbox-runner",
+      "category": "sandbox",
+      "purpose": "Local sandbox runner over fake fixtures (mixed-with-relay, gmail-venue-replies, telegram-ops-notes, content-status).",
+      "trigger": "manual demo",
+      "runner": "scripts/run_sandbox.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "wire VC walkthrough into operator-console.html"
+    },
+    {
+      "name": "workstream-products-runner",
+      "category": "demo",
+      "purpose": "Generate draft-only workstream product artifacts (speaker-prep, sponsors, outreach) from fixtures.",
+      "trigger": "manual demo",
+      "runner": "scripts/run_workstream_products.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "wire to live event triggers once workstreams go live"
+    },
+    {
+      "name": "sheet-snapshot-puller",
+      "category": "ops",
+      "purpose": "Pull live Events Master Sheet snapshot into state/events_snapshot.json. Source for drift detection.",
+      "trigger": "before every pipeline run",
+      "runner": "scripts/pull_snapshot.py",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "stable"
+    },
+    {
+      "name": "newsletter-v11-generate",
+      "category": "newsletter",
+      "purpose": "Generate newsletter draft from Generate tab inputs + Elements rules + Luma + featured events.",
+      "trigger": "manual menu in Sheets",
+      "runner": "Apps Script \u00b7 public-newsletter-script.gs::generateDraft",
+      "status": "paused",
+      "monthly_cost": "$0.50-1/issue",
+      "next_step": "unpause after content cadence decision"
+    },
+    {
+      "name": "newsletter-v11-hyperlinks",
+      "category": "newsletter",
+      "purpose": "Build Hyperlinks tab after generation; operator fills URLs; Apply Links to Doc wraps them into the Doc.",
+      "trigger": "after generation",
+      "runner": "Apps Script \u00b7 public-newsletter-script.gs::populateHyperlinksTab",
+      "status": "paused",
+      "monthly_cost": "free",
+      "next_step": "fix revision refresh bug 5"
+    },
+    {
+      "name": "newsletter-v11-feedback",
+      "category": "newsletter",
+      "purpose": "Process feedback rows into structured voice rules under the Elements divider.",
+      "trigger": "manual on Feedback tab",
+      "runner": "Apps Script \u00b7 public-newsletter-script.gs::processFeedback",
+      "status": "paused",
+      "monthly_cost": "<$0.10/run",
+      "next_step": "stable once unpaused"
+    },
+    {
+      "name": "newsletter-luma-scrape",
+      "category": "newsletter",
+      "purpose": "Pull a single Luma event into Generate tab via Luma API; QA LUMA DESCRIPTION before publish.",
+      "trigger": "manual menu",
+      "runner": "Apps Script \u00b7 Code-v11::lumaSingleEventPull",
+      "status": "paused",
+      "monthly_cost": "free",
+      "next_step": "stable"
+    },
+    {
+      "name": "stef-guest-classify",
+      "category": "ops",
+      "purpose": "Classify guests by tier from Luma exports, propose Events Sheet attendee tab updates.",
+      "trigger": "manual after event guest export",
+      "runner": "scripts/classify_stef_guests.py",
+      "status": "active",
+      "monthly_cost": "$0.20/event",
+      "next_step": "wire into pipeline once attendee tab schema confirms"
+    },
+    {
+      "name": "luma-analytics",
+      "category": "memory",
+      "purpose": "Analyze Luma history for venue, sponsor, audience trends. Outputs to docs/.",
+      "trigger": "manual",
+      "runner": "scripts/analyze_luma_history.py",
+      "status": "active",
+      "monthly_cost": "<$0.50/run",
+      "next_step": "schedule quarterly review"
+    },
+    {
+      "name": "apps-script-deploy",
+      "category": "ops",
+      "purpose": "Deploy local Apps Script changes to the live Community Newsletter Workflow project via clasp.",
+      "trigger": "manual",
+      "runner": "scripts/deploy_apps_script.sh",
+      "status": "active",
+      "monthly_cost": "free",
+      "next_step": "stable"
+    }
+  ],
+  "local_llm": [
+    {
+      "name": "Ollama",
+      "category": "local-runtime",
+      "purpose": "Local model serving for trial-product-runs and free-tier fallback.",
+      "url": "https://ollama.ai"
+    },
+    {
+      "name": "LM Studio",
+      "category": "local-runtime",
+      "purpose": "OpenAI-compatible local model server. Switch via ELA_LLM_PROVIDER=openai-compatible.",
+      "url": "https://lmstudio.ai"
+    },
+    {
+      "name": "llama3.1:8b",
+      "category": "extraction-bench",
+      "purpose": "Candidate replacement for Haiku on gmail-reader-style extraction tasks.",
+      "url": null
+    },
+    {
+      "name": "llama3.1:70b",
+      "category": "judgment-bench",
+      "purpose": "Candidate replacement for Sonnet on classifier-style tasks. Quality bench pending.",
+      "url": null
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "category": "cloud-extraction",
+      "purpose": "Default extraction model for gmail-reader, telegram-reader, drafters.",
+      "url": null
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "category": "cloud-judgment",
+      "purpose": "Default judgment model for event-classifier, venue-matcher, sponsor-fit-scorer.",
+      "url": null
+    }
+  ],
+  "retros": [
+    {
+      "name": "approval-gate-reliability",
+      "period": "2026-04-29",
+      "goal": "land Telegram approval gate that actually applies updates after operator reply",
+      "outcome": "digest 38 sent, operator replied 'approve 1 3 4', 3 approved + 1 rejected written to review handoff records; pipeline end-to-end validated.",
+      "worked": [
+        "drain pending updates before digest send so fast replies are not eaten by the drain step",
+        "line-buffered stdout for live demo readability",
+        "redacted bot tokens in error logs",
+        "explicit 409 Conflict explanation when another getUpdates consumer is running"
+      ],
+      "didnt": [
+        "initial run lost the operator reply because drain step ran after digest sent",
+        "raw bot token leaked once into error log before redaction"
+      ],
+      "lesson": "drain first, then send, then poll from the saved update id. Never log raw bot tokens.",
+      "score": 8
+    },
+    {
+      "name": "sheet-writer-row-placement",
+      "period": "2026-04-29",
+      "goal": "write new events after the last data row, not at the top",
+      "outcome": "fixed create_new behavior; new rows append after snapshot end instead of inserting against spacer column A.",
+      "worked": [
+        "snapshot row tracking exposed the off-by-one against column A",
+        "drift detector caught the bad write in the dev sheet first"
+      ],
+      "didnt": [
+        "initial implementation appended against column A and ended up inserting at the top"
+      ],
+      "lesson": "always compute new-row index from snapshot last row, never from first non-blank cell in column A.",
+      "score": 7
+    },
+    {
+      "name": "phase-3-pipeline-orchestrator",
+      "period": "2026-04-29",
+      "goal": "one-command orchestrator: pull, read, classify, approve, write, refresh",
+      "outcome": "run_pipeline.py runs the full flow; full test pulled 266 rows, found 0 new event signals, produced 0 proposals, wrote nothing, refreshed snapshot, exited cleanly.",
+      "worked": [
+        "queue-file handoff makes each stage replayable",
+        "drift refresh after write catches manual edits"
+      ],
+      "didnt": [
+        "cron schedule is still manual"
+      ],
+      "lesson": "design for the empty-signal case first; that is what the pipeline does 80% of the time.",
+      "score": 8
+    },
+    {
+      "name": "venue-workstream-fixtures",
+      "period": "2026-04-30",
+      "goal": "scaffold venue workstream with Luma-backed memory and configurable scoring",
+      "outcome": "venue-matcher returns 3 ranked venues for flagship dinner; outreach drafter produces Gmail draft payload; tracker exposes missing-feasibility fields.",
+      "worked": [
+        "fixture-first approach kept the loop tight",
+        "scoring weights in JSON instead of hard-coded"
+      ],
+      "didnt": [
+        "second-rank venue (Venue Beta) needs manual contact lookup",
+        "no Gmail reply tracker live yet"
+      ],
+      "lesson": "ship the matcher and the tracker together; matcher without tracker leaves the operator chasing replies in their head.",
+      "score": 7
+    },
+    {
+      "name": "sandbox-public-demo",
+      "period": "2026-05-03",
+      "goal": "build a real local sandbox so the framework can be shown without touching live systems",
+      "outcome": "operator-console, run-surfaces, workstream-products demos shipped with fake Gmail/Telegram/Relay/Luma/content-status/Events Sheet fixtures.",
+      "worked": [
+        "fixtures match the real schema closely enough that the demo flows look real",
+        "VC demo script gives a click-through narrative"
+      ],
+      "didnt": [
+        "VC walkthrough is still a doc, not a wired button"
+      ],
+      "lesson": "the only way to demo HITL ops to a non-operator is to make them click approve.",
+      "score": 8
+    },
+    {
+      "name": "newsletter-v11-rationalize",
+      "period": "2026-05-06",
+      "goal": "rationalize 19 versioned drafts into one canonical Apps Script",
+      "outcome": "named the canonical file public-newsletter-script.gs; documented drift between deployed sheet and code in bug-inventory.",
+      "worked": [
+        "bug-inventory is the only diff doc anyone needs",
+        "cell-map shift to row 22 is now explicit"
+      ],
+      "didnt": [
+        "body of sop-current-state.md is still off-by-one for rows below 21"
+      ],
+      "lesson": "version churn is fine, but the diff doc has to be the source of truth.",
+      "score": 6
+    },
+    {
+      "name": "luma-memory-quarterly",
+      "period": "2026-04-29",
+      "goal": "stand up Luma history as a memory primitive",
+      "outcome": "pull_luma_events.py + build_venue_memory.py + upload_venue_memory_sheet.py work end-to-end on real Luma data.",
+      "worked": [
+        "one script per concern keeps each replayable",
+        "venue memory is read-once by the matcher"
+      ],
+      "didnt": [
+        "no schedule yet; runs are manual"
+      ],
+      "lesson": "ship the script first, schedule second; never invert.",
+      "score": 7
+    },
+    {
+      "name": "atomic-skill-registry-spec",
+      "period": "2026-05-04",
+      "goal": "decompose every skill into atomic primitives",
+      "outcome": "spec doc only; deferred until 3 workstreams ship.",
+      "worked": [
+        "forced clearer naming on framework primitives like approval-gate, drift-detector, queue-manager"
+      ],
+      "didnt": [
+        "scope crept; 97 atomic skills is too many to maintain right now"
+      ],
+      "lesson": "defer atomic decomposition until the workstreams prove the surface area.",
+      "score": 5
+    }
+  ],
+  "todos": [
+    {
+      "task": "Send Venue Alpha venue inquiry draft after approval",
+      "source": "queue/venue_outreach_drafts.json",
+      "priority": "high",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Resolve manual contact lookup for Venue Beta Los Angeles (rank 2)",
+      "source": "queue/venue_outreach_tracker.json",
+      "priority": "medium",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Schedule pull_luma_events.py via launchd nightly",
+      "source": "scripts/pull_luma_events.py",
+      "priority": "medium",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Schedule run_pipeline.py via cron twice daily",
+      "source": "scripts/run_pipeline.py",
+      "priority": "medium",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Wire VC walkthrough click-through into sandbox/demo/operator-console.html",
+      "source": "sandbox/demo/VC_DEMO_SCRIPT.md",
+      "priority": "low",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Decide newsletter v11 cadence and ship 3-issue test",
+      "source": "docs/proposals/newsletter-automation-adapter.md",
+      "priority": "high",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Reconcile newsletter sop-current-state.md cell map (rows below 21 are off-by-one)",
+      "source": "docs/newsletter-sop/sop-current-state.md",
+      "priority": "low",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Build relay-crm-reader adapter (read-only) for Phase 2 memory layer",
+      "source": "docs/community-ops-phased-build-plan.md",
+      "priority": "medium",
+      "added_at": "2026-05-14T20:00:00Z"
+    },
+    {
+      "task": "Refresh sandbox fixtures with Q2 2026 event mix",
+      "source": "sandbox/fixtures/",
+      "priority": "low",
+      "added_at": "2026-05-14T20:00:00Z"
+    }
+  ],
+  "ops_entity": {
+    "name": "Workspace Ops Agent",
+    "role": "Venture Community Workspace team ops agent. Runs the pipeline, surfaces approval digests, hands off to workstream skills, and never acts without explicit human approval.",
+    "model": "claude-sonnet-4-6 + claude-haiku-4-5 (workflow-dependent)",
+    "system_prompt_path": "./agent-config/workspace-ops.md",
+    "endpoint": "http://localhost:5059",
+    "capabilities": [
+      "run the full event-ops pipeline end-to-end (pull, read, classify, approve, write, refresh)",
+      "trigger venue-workstream runs and surface drafts to Gmail",
+      "build approval digests in Telegram and parse replies",
+      "watch Gmail replies and propose status updates to the venue tracker",
+      "compose the weekly Monday digest across workstreams",
+      "report cost, drift incidents, queue depth on demand"
+    ],
+    "files_touched": [
+      "./workspace-framework/scripts/*",
+      "./workspace-framework/queue/*",
+      "./workspace-framework/state/events_snapshot.json"
+    ],
+    "what_it_does_NOT_do": [
+      "send any email (Gmail drafts only, human sends)",
+      "write to the Events Master Sheet without explicit Telegram approval",
+      "update Relay CRM (read-only adapter, propose-only writes)",
+      "rebuild the newsletter (routes around v11 Apps Script)",
+      "make sponsor or speaker decisions for the pod"
+    ],
+    "lessons_active": [
+      "approval gate drains pending updates before sending digest (2026-04-29 fix)",
+      "sheet-writer writes new events after the last snapshot row, never against spacer column A",
+      "Telegram bot tokens are always redacted from request error logs",
+      "use Haiku for extraction and relay; Sonnet only for judgment; never default to Opus"
+    ],
+    "to_chat": "Start the local ops chat server with: python3 ./workspace-dashboard/scripts/ops-server.py"
+  },
+  "team_pulse": {
+    "updated_at": "2026-05-14T20:00:00Z",
+    "summary": "Focused on Phase 4 venue workstream; flagship outreach is the next concrete deliverable that turns scaffolding into a live booked dinner.",
+    "themes": [
+      "ship the workstream before generalizing",
+      "human-in-the-loop on every dangerous write",
+      "review handoff records between stages, not direct calls",
+      "cheap AI for reading, stronger AI for judgment, deterministic execution after approval",
+      "demo before docs"
+    ],
+    "concerns": [
+      "newsletter v11 has been paused too long; cadence decision is overdue",
+      "atomic skill registry is tempting but premature",
+      "no launchd schedules yet; everything is manual",
+      "Relay CRM adapter has not started"
+    ],
+    "energy_read": "Energy is on the venue workstream and the dashboard; newsletter v11 is a sleeping giant that will demand a real cadence decision before it unpauses cleanly."
+  }
+}

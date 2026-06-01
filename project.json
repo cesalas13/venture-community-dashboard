@@ -1,0 +1,19 @@
+{
+  "name": "workspace-dashboard",
+  "type": "ops",
+  "status": "active",
+  "description": "Single-file HTML dashboard for the Venture Community Workspace. Reads state.json. Master view of workstreams, sub-agents, automations, queue, ideas, retros, and team pulse.",
+  "created": "2026-05-14",
+  "last_touched": "2026-05-14",
+  "path": "./workspace-dashboard/",
+  "tags": ["vcw", "dashboard", "swift", "ops"],
+  "tech": ["html", "vanilla-js", "geist", "swift", "webkit", "flask"],
+  "priority": "medium",
+  "links": {
+    "repo": null,
+    "deploy": "/Applications/Workspace Dashboard.app",
+    "doc": null,
+    "server": "http://127.0.0.1:8766",
+    "ops": "http://localhost:5059"
+  }
+}

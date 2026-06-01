@@ -1,0 +1,63 @@
+[
+  {
+    "proposal_id": "sandbox_prop_001",
+    "status": "applied",
+    "target_id": "evt_001",
+    "field": "venue",
+    "value": "Warehouse West"
+  },
+  {
+    "proposal_id": "sandbox_prop_002",
+    "status": "applied",
+    "target_id": "evt_001",
+    "field": "status",
+    "value": "venue hold needs approval"
+  },
+  {
+    "proposal_id": "sandbox_prop_003",
+    "status": "applied",
+    "target_id": "evt_003",
+    "field": "venue",
+    "value": "Culver Hub"
+  },
+  {
+    "proposal_id": "sandbox_prop_004",
+    "status": "applied",
+    "target_id": "evt_003",
+    "field": "notes",
+    "value": "Needs loading access and room for demo tables. Culver Hub quote: $2500 plus security."
+  },
+  {
+    "proposal_id": "sandbox_prop_005",
+    "status": "applied",
+    "target_id": "evt_001",
+    "field": "notes",
+    "value": "Needs projector, quiet room, sponsor-friendly layout. Operator preference: Arts District under $2k."
+  },
+  {
+    "proposal_id": "sandbox_prop_007",
+    "status": "drift_skipped",
+    "field": "notes",
+    "expected_value": "Needs loading access and room for demo tables.",
+    "current_value": "Needs loading access and room for demo tables. Culver Hub quote: $2500 plus security."
+  },
+  {
+    "proposal_id": "sandbox_prop_006",
+    "status": "skipped",
+    "reason": "Sandbox does not apply non-sheet writes."
+  },
+  {
+    "proposal_id": "sandbox_prop_content_cnt_001",
+    "status": "drift_skipped",
+    "field": "notes",
+    "expected_value": "Needs projector, quiet room, sponsor-friendly layout.",
+    "current_value": "Needs projector, quiet room, sponsor-friendly layout. Operator preference: Arts District under $2k."
+  },
+  {
+    "proposal_id": "sandbox_prop_content_cnt_002",
+    "status": "applied",
+    "target_id": "evt_002",
+    "field": "notes",
+    "value": "Dinner format. Confirm dietary constraints. Content status: social recap is not started (route around)."
+  }
+]

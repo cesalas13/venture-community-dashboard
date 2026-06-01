@@ -1,0 +1,23 @@
+[
+  {
+    "id": "gm_001",
+    "from": "maria@warehousewest.example",
+    "subject": "Re: AI Builders Salon venue hold",
+    "date": "2026-05-03T09:15:00-07:00",
+    "body": "We can hold June 12 for Venture Community. Capacity is 110 seated, projector included, venue fee $1800, Arts District. Need confirmation by Friday."
+  },
+  {
+    "id": "gm_002",
+    "from": "sam@culverhub.example",
+    "subject": "HardTech Demo Night",
+    "date": "2026-05-03T10:40:00-07:00",
+    "body": "Culver Hub can host July 10. Capacity 160, loading dock available, demo tables included. Quote is $2500 plus security."
+  },
+  {
+    "id": "gm_003",
+    "from": "newsletter@existing-content.example",
+    "subject": "Weekly recap scheduled",
+    "date": "2026-05-03T11:05:00-07:00",
+    "body": "The AI Builders recap draft is queued in the existing content automation. No action needed from the event ops sheet."
+  }
+]

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCW Run Surfaces</title>
+    <link rel="stylesheet" href="run-surfaces.css">
+  </head>
+  <body>
+    <aside class="rail">
+      <div class="brand">
+        <span>VCW</span>
+        <div>
+          <strong>Run Surfaces</strong>
+          <small>Sandbox · Trial · Real</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#lanes">Lanes</a>
+        <a href="#products">Products</a>
+        <a href="#commands">Commands</a>
+        <a href="#safety">Safety</a>
+      </nav>
+      <div class="rail-card">
+        <strong>Purpose</strong>
+        <span>One view of what is fake, what is a local model trial, and what is the live product.</span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">VCW Workspace control plane</p>
+          <h1>See every product through the same three run lanes.</h1>
+          <p>
+            Each workstream can be understood as a product with a safe sandbox, a trial run lane,
+            and an actual product run. The boundaries stay visible so demos do not blur into production.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a href="operator-console.html">Open Sandbox Console</a>
+          <a href="workstream-products.html">Open Workstream Products</a>
+          <a href="newsletter-console.html">Open Newsletter Sandbox</a>
+        </div>
+      </header>
+
+      <section class="panel" id="lanes">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">Run lanes</p>
+            <h2>Same repo, different blast radius</h2>
+          </div>
+        </div>
+        <div class="lane-grid" id="laneGrid"></div>
+      </section>
+
+      <section class="panel" id="products">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">Product map</p>
+            <h2>Every workstream has a visible function surface</h2>
+          </div>
+          <span class="pill">operator first</span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="panel" id="commands">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">Command ladder</p>
+            <h2>Start safe, then move toward production</h2>
+          </div>
+        </div>
+        <div class="command-stack" id="commandStack"></div>
+      </section>
+
+      <section class="panel" id="safety">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">Safety model</p>
+            <h2>What GitHub should make obvious</h2>
+          </div>
+          <span class="pill warn">no hidden writes</span>
+        </div>
+        <div class="safety-grid">
+          <article>
+            <h3>Sandbox</h3>
+            <p>Fake fixtures only. Good for product demos and VC walkthroughs.</p>
+          </article>
+          <article>
+            <h3>Trial Run</h3>
+            <p>Local model behavior tests. Generated receipts are ignored, reusable harnesses are tracked.</p>
+          </article>
+          <article>
+            <h3>Real Product</h3>
+            <p>Live adapters can read Gmail, Telegram, Sheets, Luma, or Relay and must remain approval-gated.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="run-surfaces.js?v=20260519-clickable"></script>
+  </body>
+</html>

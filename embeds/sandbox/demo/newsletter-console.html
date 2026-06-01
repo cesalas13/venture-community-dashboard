@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCW Newsletter Sandbox</title>
+    <link rel="stylesheet" href="newsletter-console.css">
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span>VCW</span>
+        <div>
+          <strong>Newsletter Sandbox</strong>
+          <small>Content automation demo</small>
+        </div>
+      </div>
+      <div class="side-note">
+        <strong>Boundary</strong>
+        <span>Fake sheet state. No Claude call, no Luma scrape, no Google Doc write, no Beehiiv publish.</span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero product-newsletter">
+        <div>
+          <p class="eyebrow">Sandbox product · Newsletter / Content</p>
+          <h1>See the newsletter workflow without opening the live Google Sheet.</h1>
+          <p>
+            This mirrors the Apps Script product you pasted: Generate, Elements, Feedback,
+            Hyperlinks, Log, and promotion readiness. It shows how VCW Workspace coordinates
+            with the existing newsletter automation instead of replacing it.
+          </p>
+        </div>
+        <div class="metrics" id="metrics"></div>
+      </header>
+
+      <section class="panel" id="generate">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Generate tab</p>
+            <h2>Operator intake from the existing spreadsheet</h2>
+          </div>
+          <span class="pill">fake sheet</span>
+        </div>
+        <div class="generate-grid">
+          <article class="form-card" id="issueCard"></article>
+          <article class="form-card" id="contextCard"></article>
+          <article class="form-card" id="overrideCard"></article>
+        </div>
+        <div class="actions">
+          <button type="button" id="simulateButton">Simulate Generate Draft</button>
+          <button type="button" id="resolveLinksButton" class="secondary">Resolve All Links</button>
+          <button type="button" id="learnButton" class="ghost">Process Feedback</button>
+          <button type="button" id="resetButton" class="ghost">Reset</button>
+        </div>
+      </section>
+
+      <section class="panel" id="readiness">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Promotion hold checker</p>
+            <h2>What blocks this issue from going out</h2>
+          </div>
+          <span class="pill warn">approval needed</span>
+        </div>
+        <div class="readiness-grid" id="readinessGrid"></div>
+      </section>
+
+      <section class="panel" id="elements">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Elements tab</p>
+            <h2>Rules the generator is supposed to enforce</h2>
+          </div>
+          <span class="pill">voice base</span>
+        </div>
+        <div class="rules-grid" id="rulesGrid"></div>
+      </section>
+
+      <section class="panel" id="feedback">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Feedback inbox</p>
+            <h2>Raw team notes become reusable rules</h2>
+          </div>
+          <span class="pill">learning queue</span>
+        </div>
+        <div class="feedback-grid" id="feedbackGrid"></div>
+      </section>
+
+      <section class="panel" id="links">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Hyperlinks tab</p>
+            <h2>Link QA before Beehiiv paste</h2>
+          </div>
+          <span class="pill warn">manual QA</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Phrase</th>
+                <th>Type</th>
+                <th>URL</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="linksBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="log">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Log tab</p>
+            <h2>Generation receipts and audit trail</h2>
+          </div>
+          <span class="pill good">local demo</span>
+        </div>
+        <div class="log-stack" id="logStack"></div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+    <script src="newsletter-console.js?v=20260519-clickable"></script>
+  </body>
+</html>

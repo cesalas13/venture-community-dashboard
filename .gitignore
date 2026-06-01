@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.bak-pre-*
+.vercel
+.stfolder
+.stignore
+__pycache__/
+*.pyc

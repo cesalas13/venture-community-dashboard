@@ -1,0 +1,18 @@
+{"ts": "2026-05-04T01:26:22.786362+00:00", "event": "sandbox_queue_created", "proposal_count": 8, "approve_all": false}
+{"ts": "2026-05-04T01:26:22.786343+00:00", "event": "sandbox_queue_created", "proposal_count": 8, "approve_all": true}
+{"ts": "2026-05-04T01:26:22.786778+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 6, "skipped_count": 2}
+{"ts": "2026-05-04T01:30:25.099984+00:00", "event": "sandbox_queue_created", "scenario": "telegram-ops-notes", "proposal_count": 2, "approve_all": false}
+{"ts": "2026-05-04T01:30:25.100018+00:00", "event": "sandbox_queue_created", "scenario": "gmail-venue-replies", "proposal_count": 4, "approve_all": false}
+{"ts": "2026-05-04T01:30:32.116644+00:00", "event": "sandbox_queue_created", "scenario": "content-status", "proposal_count": 2, "approve_all": false}
+{"ts": "2026-05-04T01:30:32.120787+00:00", "event": "sandbox_queue_created", "scenario": "mixed-with-relay", "proposal_count": 9, "approve_all": true}
+{"ts": "2026-05-04T01:30:32.121415+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 6, "skipped_count": 3}
+{"ts": "2026-05-04T01:32:37.149346+00:00", "event": "sandbox_queue_created", "scenario": "gmail-venue-replies", "proposal_count": 4, "approve_all": false}
+{"ts": "2026-05-04T01:32:48.393545+00:00", "event": "sandbox_queue_created", "scenario": "gmail-venue-replies", "proposal_count": 4, "approve_all": true}
+{"ts": "2026-05-04T01:32:48.393924+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 4, "skipped_count": 0}
+{"ts": "2026-05-04T01:37:25.784395+00:00", "event": "sandbox_queue_created", "scenario": "mixed-with-relay", "proposal_count": 9, "approve_all": true}
+{"ts": "2026-05-04T01:37:25.784847+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 6, "skipped_count": 3}
+{"ts": "2026-05-04T02:07:00.817034+00:00", "event": "sandbox_queue_created", "scenario": "mixed-with-relay", "proposal_count": 9, "approve_all": true}
+{"ts": "2026-05-04T02:07:00.817360+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 6, "skipped_count": 3}
+{"ts": "2026-05-04T06:17:49.182876+00:00", "event": "sandbox_queue_created", "scenario": "gmail-venue-replies", "proposal_count": 4, "approve_all": false}
+{"ts": "2026-05-15T00:17:16.216426+00:00", "event": "sandbox_queue_created", "scenario": "mixed-with-relay", "proposal_count": 9, "approve_all": true}
+{"ts": "2026-05-15T00:17:16.217283+00:00", "event": "sandbox_approved_writes_applied", "applied_count": 6, "skipped_count": 3}

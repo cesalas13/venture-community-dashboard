@@ -1,0 +1,11 @@
+{
+  "name": "gmail-venue-replies",
+  "description": "Gmail-only venue replies. Use this to test inbox parsing, venue matching, proposal creation, and approval-gated sheet writes.",
+  "enabled_sources": {
+    "gmail": true,
+    "telegram": false,
+    "relay": false,
+    "luma": true,
+    "content": false
+  }
+}

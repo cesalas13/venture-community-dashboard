@@ -1,0 +1,18 @@
+[
+  {
+    "content_id": "cnt_001",
+    "workflow": "newsletter",
+    "event_name": "AI Builders Salon",
+    "status": "draft queued",
+    "owner": "existing content automation",
+    "framework_action": "visibility only"
+  },
+  {
+    "content_id": "cnt_002",
+    "workflow": "social recap",
+    "event_name": "Climate Founders Dinner",
+    "status": "not started",
+    "owner": "existing content automation",
+    "framework_action": "route around"
+  }
+]

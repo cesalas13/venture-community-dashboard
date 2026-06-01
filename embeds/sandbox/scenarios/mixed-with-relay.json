@@ -1,0 +1,11 @@
+{
+  "name": "mixed-with-relay",
+  "description": "Full mixed sandbox with Gmail, Telegram, Relay CRM update planning, Luma venue memory, and content status visibility.",
+  "enabled_sources": {
+    "gmail": true,
+    "telegram": true,
+    "relay": true,
+    "luma": true,
+    "content": true
+  }
+}

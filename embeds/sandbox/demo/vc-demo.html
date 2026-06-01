@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCW Workspace Sandbox Demo</title>
+    <style>
+      :root {
+        --ink: #17202a;
+        --muted: #637083;
+        --line: #d9e0ea;
+        --bg: #f4f7fb;
+        --panel: #fff;
+        --soft: #f8fafc;
+        --blue: #2563eb;
+        --green: #178657;
+        --amber: #a16207;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      main {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 28px 0 48px;
+      }
+      .hero, section {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 18px 48px rgba(23, 32, 42, 0.08);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        padding: 28px;
+        margin-bottom: 18px;
+      }
+      section {
+        padding: 20px;
+        margin-bottom: 18px;
+      }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { font-size: 38px; line-height: 1.08; margin-bottom: 12px; }
+      h2 { font-size: 24px; margin-bottom: 10px; }
+      h3 { font-size: 16px; margin-bottom: 8px; }
+      p { color: var(--muted); line-height: 1.5; }
+      .eyebrow {
+        color: var(--blue);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0;
+        margin-bottom: 6px;
+      }
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .metric, .proposal, .message {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--soft);
+        padding: 14px;
+      }
+      .metric span, .message span, .proposal-top span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+      .metric strong {
+        display: block;
+        margin-top: 6px;
+        font-size: 28px;
+      }
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .step {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 13px;
+        background: #fff;
+        min-height: 118px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 12px;
+      }
+      .proposal-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .proposal-top strong {
+        display: grid;
+        place-items: center;
+        min-width: 48px;
+        height: 34px;
+        border-radius: 8px;
+        background: #dcfce7;
+        color: #166534;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 11px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+      .pill {
+        display: inline-flex;
+        padding: 5px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 900;
+      }
+      .good { background: #dcfce7; color: #166534; }
+      .warn { background: #fef3c7; color: #92400e; }
+      .muted { color: var(--muted); }
+      .script {
+        background: #121826;
+        color: #e5e7eb;
+        border-radius: 8px;
+        padding: 16px;
+        line-height: 1.55;
+      }
+      code {
+        background: #eaf2ff;
+        color: #174ea6;
+        padding: 2px 5px;
+        border-radius: 6px;
+      }
+      @media (max-width: 820px) {
+        .hero, .flow { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">VCW Workspace Sandbox</p>
+          <h1>Agentic ops, with a safety gate before anything writes.</h1>
+          <p>This is the demo version: fake Gmail and Telegram inputs flow through the same architecture pattern as production, produce approval-gated proposals, and apply only to a fake local sheet.</p>
+        </div>
+        <div class="metrics">
+          <article class="metric"><span>Scenario</span><strong>mixed-with-relay</strong></article>
+          <article class="metric"><span>Live integrations</span><strong>false</strong></article>
+          <article class="metric"><span>Proposals</span><strong>9</strong></article>
+          <article class="metric"><span>Applied</span><strong>6</strong></article>
+        </div>
+      </header>
+
+      <section>
+        <p class="eyebrow">The product flow</p>
+        <h2>From messy messages to approved operating state</h2>
+        <div class="flow">
+          <article class="step"><h3>1. Read</h3><p>Ingest Gmail, Telegram, Luma, Relay CRM, and content status through adapters.</p></article>
+          <article class="step"><h3>2. Extract</h3><p>Convert unstructured messages into structured event and venue signals.</p></article>
+          <article class="step"><h3>3. Propose</h3><p>Create cell-level updates with expected values, confidence, and rationale.</p></article>
+          <article class="step"><h3>4. Approve</h3><p>Human approval is required before any write can happen.</p></article>
+          <article class="step"><h3>5. Drift-check</h3><p>Before writing, compare expected value to current value to avoid overwriting people.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Example inputs</p>
+        <h2>Fake Gmail and Telegram messages</h2>
+        <div class="grid">
+
+      <article class="message">
+        <span>gmail</span>
+        <h3>Re: AI Builders Salon venue hold</h3>
+        <p>We can hold June 12 for Venture Community. Capacity is 110 seated, projector included, venue fee $1800, Arts District. Need confirmation by Friday.</p>
+      </article>
+
+      <article class="message">
+        <span>gmail</span>
+        <h3>HardTech Demo Night</h3>
+        <p>Culver Hub can host July 10. Capacity 160, loading dock available, demo tables included. Quote is $2500 plus security.</p>
+      </article>
+
+
+      <article class="message">
+        <span>telegram</span>
+        <h3>Operator in vcw-ops</h3>
+        <p>For AI Builders Salon, prioritize Arts District venues under $2k if they have projector and sponsor-friendly layout.</p>
+      </article>
+
+      <article class="message">
+        <span>telegram</span>
+        <h3>Workspace Admin in vcw-ops</h3>
+        <p>HardTech needs loading access and enough room for demo tables. Culver City preferred.</p>
+      </article>
+
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Approval queue</p>
+        <h2>What the agent proposes, not what it blindly writes</h2>
+        <div class="grid">
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.91</strong>
+        </div>
+        <h3>evt_001 · venue</h3>
+        <p><b>From:</b> <em>blank</em></p>
+        <p><b>To:</b> Warehouse West</p>
+        <p class="muted">Gmail offer matches date, capacity, Arts District preference, projector need, and prior Luma venue memory.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.86</strong>
+        </div>
+        <h3>evt_001 · status</h3>
+        <p><b>From:</b> venue scouting</p>
+        <p><b>To:</b> venue hold needs approval</p>
+        <p class="muted">Venue offered a temporary hold and requires confirmation by Friday.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.89</strong>
+        </div>
+        <h3>evt_003 · venue</h3>
+        <p><b>From:</b> <em>blank</em></p>
+        <p><b>To:</b> Culver Hub</p>
+        <p class="muted">Gmail reply matches July 10, Culver City preference, 160 capacity, loading dock, and demo tables.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.84</strong>
+        </div>
+        <h3>evt_003 · notes</h3>
+        <p><b>From:</b> Needs loading access and room for demo tables.</p>
+        <p><b>To:</b> Needs loading access and room for demo tables. Culver Hub quote: $2500 plus security.</p>
+        <p class="muted">Adds concrete quote and operational constraints from venue reply while preserving original need.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.79</strong>
+        </div>
+        <h3>evt_001 · notes</h3>
+        <p><b>From:</b> Needs projector, quiet room, sponsor-friendly layout.</p>
+        <p><b>To:</b> Needs projector, quiet room, sponsor-friendly layout. Operator preference: Arts District under $2k.</p>
+        <p class="muted">Telegram adds decision criteria from Operator without writing live sheet data.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>venue</span>
+          <strong>0.76</strong>
+        </div>
+        <h3>evt_003 · notes</h3>
+        <p><b>From:</b> Needs loading access and room for demo tables.</p>
+        <p><b>To:</b> Needs loading access, room for demo tables, and Culver City preference from Telegram ops.</p>
+        <p class="muted">Telegram ops note adds venue requirements before any Gmail venue reply is considered.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>relay-crm-update-planner</span>
+          <strong>0.72</strong>
+        </div>
+        <h3>rel_002 · relationship_stage</h3>
+        <p><b>From:</b> new</p>
+        <p><b>To:</b> warm</p>
+        <p class="muted">Culver Hub has an active venue reply and prior Luma event history; propose, do not write, CRM update.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>content-status-router</span>
+          <strong>0.62</strong>
+        </div>
+        <h3>evt_001 · notes</h3>
+        <p><b>From:</b> Needs projector, quiet room, sponsor-friendly layout.</p>
+        <p><b>To:</b> Needs projector, quiet room, sponsor-friendly layout. Content status: newsletter is draft queued (visibility only).</p>
+        <p class="muted">Content automation is not rebuilt; sandbox only proposes visibility notes.</p>
+      </article>
+
+      <article class="proposal">
+        <div class="proposal-top">
+          <span>content-status-router</span>
+          <strong>0.62</strong>
+        </div>
+        <h3>evt_002 · notes</h3>
+        <p><b>From:</b> Dinner format. Confirm dietary constraints.</p>
+        <p><b>To:</b> Dinner format. Confirm dietary constraints. Content status: social recap is not started (route around).</p>
+        <p class="muted">Content automation is not rebuilt; sandbox only proposes visibility notes.</p>
+      </article>
+
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">Fake-approved writes</p>
+        <h2>What changed in the sandbox</h2>
+        <table>
+          <thead><tr><th>Proposal</th><th>Status</th><th>Target</th><th>Value</th></tr></thead>
+          <tbody>
+      <tr>
+        <td>sandbox_prop_001</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_001 · venue</td>
+        <td>Warehouse West</td>
+      </tr>
+
+      <tr>
+        <td>sandbox_prop_002</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_001 · status</td>
+        <td>venue hold needs approval</td>
+      </tr>
+
+      <tr>
+        <td>sandbox_prop_003</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_003 · venue</td>
+        <td>Culver Hub</td>
+      </tr>
+
+      <tr>
+        <td>sandbox_prop_004</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_003 · notes</td>
+        <td>Needs loading access and room for demo tables. Culver Hub quote: $2500 plus security.</td>
+      </tr>
+
+      <tr>
+        <td>sandbox_prop_005</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_001 · notes</td>
+        <td>Needs projector, quiet room, sponsor-friendly layout. Operator preference: Arts District under $2k.</td>
+      </tr>
+
+          <tr>
+            <td>sandbox_prop_007</td>
+            <td><span class="pill warn">drift_skipped</span></td>
+            <td colspan="2">notes</td>
+          </tr>
+
+          <tr>
+            <td>sandbox_prop_006</td>
+            <td><span class="pill warn">skipped</span></td>
+            <td colspan="2">Sandbox does not apply non-sheet writes.</td>
+          </tr>
+
+          <tr>
+            <td>sandbox_prop_content_cnt_001</td>
+            <td><span class="pill warn">drift_skipped</span></td>
+            <td colspan="2">notes</td>
+          </tr>
+
+      <tr>
+        <td>sandbox_prop_content_cnt_002</td>
+        <td><span class="pill good">applied</span></td>
+        <td>evt_002 · notes</td>
+        <td>Dinner format. Confirm dietary constraints. Content status: social recap is not started (route around).</td>
+      </tr>
+    </tbody>
+        </table>
+      </section>
+
+      <section>
+        <p class="eyebrow">Sandbox sheet after</p>
+        <h2>The fake Events Master Sheet after approval</h2>
+        <table>
+          <thead><tr><th>Event</th><th>Date</th><th>Status</th><th>Venue</th><th>Notes</th></tr></thead>
+          <tbody>
+      <tr>
+        <td>AI Builders Salon</td>
+        <td>2026-06-12</td>
+        <td>venue hold needs approval</td>
+        <td>Warehouse West</td>
+        <td>Needs projector, quiet room, sponsor-friendly layout. Operator preference: Arts District under $2k.</td>
+      </tr>
+
+      <tr>
+        <td>Climate Founders Dinner</td>
+        <td>2026-06-26</td>
+        <td>speaker prep</td>
+        <td>Existing Partner Loft</td>
+        <td>Dinner format. Confirm dietary constraints. Content status: social recap is not started (route around).</td>
+      </tr>
+
+      <tr>
+        <td>HardTech Demo Night</td>
+        <td>2026-07-10</td>
+        <td>sponsor outreach</td>
+        <td>Culver Hub</td>
+        <td>Needs loading access and room for demo tables. Culver Hub quote: $2500 plus security.</td>
+      </tr>
+    </tbody>
+        </table>
+      </section>
+
+      <section>
+        <p class="eyebrow">Talking track</p>
+        <h2>60-second demo script</h2>
+        <div class="script">
+          “This is a sandbox of the VCW Workspace framework. The problem is that community operations live across Gmail, Telegram, Sheets, CRM, Luma, and content tools. The agent does not replace those tools. It reads approved sources, proposes specific updates, waits for approval, drift-checks the current state, then writes only approved changes. In this example, fake Gmail, Telegram, Relay, Luma, and content-status inputs become approval-gated operating proposals. After simulated approval, the sandbox sheet gets safe venue/status updates, while CRM and drift-risk updates are skipped. No real Gmail or Google Sheet is touched. This proves the core safety model: agents do triage and proposal work; humans control writes.”
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

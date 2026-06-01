@@ -1,0 +1,11 @@
+{
+  "name": "telegram-ops-notes",
+  "description": "Telegram-only ops notes. Use this to test team-chat routing without Gmail or sheet writes to live systems.",
+  "enabled_sources": {
+    "gmail": false,
+    "telegram": true,
+    "relay": false,
+    "luma": false,
+    "content": false
+  }
+}

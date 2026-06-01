@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCW Sandbox Operator Console</title>
+    <link rel="stylesheet" href="operator-console.css">
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span>VCW</span>
+        <div>
+          <strong>Sandbox Console</strong>
+          <small>Local product demo</small>
+        </div>
+      </div>
+      <div class="side-note">
+        <strong>Safety</strong>
+        <span>No Gmail, Telegram, Google Sheets, Relay, or Luma connection. This is a local operating sandbox.</span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero" id="run">
+        <div>
+          <p class="eyebrow">Live sandbox product</p>
+          <h1>Run the VCW workflow without touching real systems.</h1>
+          <p>
+            Choose a source scenario, generate approval-gated proposals, approve or reject them,
+            and watch a fake Events Master Sheet update with drift protection.
+          </p>
+          <div class="controls">
+            <label>
+              Scenario
+              <select id="scenarioSelect"></select>
+            </label>
+            <button type="button" id="generateButton">Generate Proposals</button>
+            <button type="button" id="approveAllButton" class="secondary">Approve All</button>
+            <button type="button" id="resetButton" class="ghost">Reset</button>
+          </div>
+        </div>
+        <div class="metrics" id="metrics"></div>
+      </header>
+
+      <section class="panel" id="inbox">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Inputs</p>
+            <h2>Fake source messages for the selected scenario</h2>
+          </div>
+          <span class="pill">fixture adapters</span>
+        </div>
+        <div class="message-grid" id="messageGrid"></div>
+      </section>
+
+      <section class="panel" id="proposals">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Approval queue</p>
+            <h2>Proposals waiting on a human</h2>
+          </div>
+          <span class="pill warn">no blind writes</span>
+        </div>
+        <div class="proposal-grid" id="proposalGrid"></div>
+      </section>
+
+      <section class="panel" id="sheet">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Fake Events Master Sheet</p>
+            <h2>State after approved sandbox writes</h2>
+          </div>
+          <span class="pill good">local only</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Venue</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="sheetBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="audit">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Audit log</p>
+            <h2>Every action is visible</h2>
+          </div>
+          <span class="pill">replayable</span>
+        </div>
+        <div class="audit-log" id="auditLog"></div>
+      </section>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+    <script src="operator-console.js?v=20260519-clickable"></script>
+  </body>
+</html>

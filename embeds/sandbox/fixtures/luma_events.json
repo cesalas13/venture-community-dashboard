@@ -1,0 +1,20 @@
+[
+  {
+    "event_id": "luma_001",
+    "event_name": "Founder Breakfast",
+    "venue": "Warehouse West",
+    "date": "2026-03-14",
+    "attendance": 82,
+    "venue_rating": 4.6,
+    "notes": "Good AV, clean check-in, sponsor signage worked."
+  },
+  {
+    "event_id": "luma_002",
+    "event_name": "Robotics Mixer",
+    "venue": "Culver Hub",
+    "date": "2026-04-18",
+    "attendance": 128,
+    "venue_rating": 4.4,
+    "notes": "Loading access was strong. Audio needed extra setup time."
+  }
+]

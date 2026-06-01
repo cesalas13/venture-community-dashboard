@@ -1,0 +1,39 @@
+{
+  "sheet_name": "Events Master Sheet - Sandbox",
+  "snapshot_id": "sandbox-2026-05-03",
+  "rows": [
+    {
+      "row_id": "evt_001",
+      "event_name": "AI Builders Salon",
+      "date": "2026-06-12",
+      "status": "venue scouting",
+      "venue": "",
+      "capacity_needed": 90,
+      "neighborhood": "Arts District",
+      "owner": "Workspace Admin",
+      "notes": "Needs projector, quiet room, sponsor-friendly layout."
+    },
+    {
+      "row_id": "evt_002",
+      "event_name": "Climate Founders Dinner",
+      "date": "2026-06-26",
+      "status": "speaker prep",
+      "venue": "Existing Partner Loft",
+      "capacity_needed": 40,
+      "neighborhood": "Santa Monica",
+      "owner": "Operator",
+      "notes": "Dinner format. Confirm dietary constraints."
+    },
+    {
+      "row_id": "evt_003",
+      "event_name": "HardTech Demo Night",
+      "date": "2026-07-10",
+      "status": "sponsor outreach",
+      "venue": "",
+      "capacity_needed": 140,
+      "neighborhood": "Culver City",
+      "owner": "Workspace Admin",
+      "notes": "Needs loading access and room for demo tables."
+    }
+  ]
+}

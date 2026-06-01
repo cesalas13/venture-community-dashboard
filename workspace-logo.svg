@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Workspace logo">
+  <rect width="512" height="512" rx="112" fill="#050608"/>
+  <rect x="68" y="68" width="376" height="376" rx="82" fill="#ffffff" opacity="0.96"/>
+  <path d="M140 176h232v48H140zM140 250h170v48H140zM140 324h232v48H140z" fill="#050608"/>
+  <circle cx="364" cy="274" r="34" fill="#f248b7"/>
+</svg>

@@ -1,0 +1,18 @@
+[
+  {
+    "contact_id": "rel_001",
+    "name": "Maria Lee",
+    "org": "Warehouse West",
+    "relationship_stage": "warm",
+    "last_touch": "2026-05-03",
+    "tags": ["venue", "arts-district"]
+  },
+  {
+    "contact_id": "rel_002",
+    "name": "Sam Patel",
+    "org": "Culver Hub",
+    "relationship_stage": "new",
+    "last_touch": "2026-05-03",
+    "tags": ["venue", "culver-city", "hardtech"]
+  }
+]

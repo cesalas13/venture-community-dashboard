@@ -1,0 +1,206 @@
+{
+  "run_at": "2026-05-15T00:17:16.214496+00:00",
+  "mode": "draft_only_product_workstreams",
+  "live_integrations": false,
+  "products": [
+    {
+      "spoke": "speaker-prep",
+      "status": "draft_ready",
+      "event": {
+        "event_id": "fixture-event-speaker-001",
+        "name": "Stablecoin Founder Panel",
+        "date": "2026-06-18",
+        "topic": "How stablecoins are changing consumer payments",
+        "format": "45-minute moderated panel"
+      },
+      "speaker": {
+        "speaker_id": "speaker-001",
+        "name": "Avery Chen",
+        "company": "Northstar Wallet",
+        "bio": "Founder building consumer wallet infrastructure for stablecoin payments.",
+        "email": "avery@example.com",
+        "prep_status": "not started"
+      },
+      "missing_information": [
+        "Headshot URL",
+        "Speaker title",
+        "Assistant or PR contact",
+        "Approved talking points"
+      ],
+      "prep_doc_payload": {
+        "title": "Stablecoin Founder Panel - Avery Chen Prep",
+        "sections": [
+          "Event context",
+          "Speaker bio",
+          "Missing info",
+          "Panel questions",
+          "Run of show"
+        ]
+      },
+      "panel_questions": [
+        {
+          "question": "What did you learn about consumer payments that was not obvious before you started building Northstar Wallet?",
+          "why_it_works": "Grounds the panel in founder-specific learning instead of generic stablecoin commentary."
+        },
+        {
+          "question": "Where are stablecoins already good enough for consumers, and where do they still feel like infrastructure instead of product?",
+          "why_it_works": "Separates real product readiness from industry optimism."
+        },
+        {
+          "question": "What has to be invisible for a consumer wallet to feel trustworthy?",
+          "why_it_works": "Connects UX, safety, and infrastructure without asking for confidential roadmap details."
+        },
+        {
+          "question": "How do you think about distribution when the end user may not care that the payment rail is a stablecoin?",
+          "why_it_works": "Moves beyond technology into go-to-market and adoption."
+        },
+        {
+          "question": "What is one misconception founders have when they first try to build payments products on crypto rails?",
+          "why_it_works": "Creates a useful builder takeaway for the VCW audience."
+        },
+        {
+          "question": "If we reran this panel in two years, what would need to change for stablecoins to feel normal in everyday commerce?",
+          "why_it_works": "Ends with a forward-looking, concrete adoption bar."
+        }
+      ],
+      "gmail_briefing_draft": {
+        "to": "avery@example.com",
+        "subject": "Prep for Stablecoin Founder Panel on 2026-06-18",
+        "body": "Hi Avery Chen,\n\nExcited to have you join Stablecoin Founder Panel. The session is a 45-minute moderated panel on 'How stablecoins are changing consumer payments'. We will keep the conversation practical for founders and operators.\n\nCould you send over any missing speaker details and a few themes you would be excited to cover?\n\nBest,\nELA Team"
+      },
+      "calendar_prep_block": {
+        "title": "Prep call: Avery Chen / Stablecoin Founder Panel",
+        "duration_minutes": 25,
+        "status": "draft_only"
+      },
+      "approval_gate": "No Gmail or Calendar action is sent automatically."
+    },
+    {
+      "spoke": "sponsors",
+      "status": "draft_ready",
+      "follow_up": {
+        "event": {
+          "event_id": "fixture-event-sponsor-001",
+          "name": "Crypto Builder Mixer",
+          "date": "2026-05-21",
+          "attendance": 92,
+          "contacts_captured": 34,
+          "photos_url": "https://example.com/photos"
+        },
+        "sponsor": {
+          "sponsor_id": "sponsor-001",
+          "company": "BridgeStack",
+          "contact_name": "Mina Patel",
+          "contact_email": "mina@example.com",
+          "relationship_status": "active",
+          "last_sponsorship": "May mixer"
+        },
+        "thank_you_draft": {
+          "to": "mina@example.com",
+          "subject": "Thank you for supporting Crypto Builder Mixer",
+          "body": "Hi Mina Patel,\n\nThank you again for supporting Crypto Builder Mixer. We had 92 attendees and captured 34 new community contacts. Photos are here: https://example.com/photos.\n\nA natural next angle would be a deeper builder-facing partnership around infrastructure and go-to-market support.\n\nBest,\nELA Team"
+        },
+        "renewal_prompt": "Create a renewal reminder 60 days after the event recap is sent.",
+        "one_pager_payload": {
+          "title": "Crypto Builder Mixer sponsor recap",
+          "metrics": {
+            "attendance": 92,
+            "contacts_captured": 34,
+            "photos_url": "https://example.com/photos"
+          }
+        }
+      },
+      "prospecting": {
+        "input": {
+          "event_type": "Q3 crypto builder mixer",
+          "target_attendee_profile": "Founders and technical operators building in crypto infrastructure, wallets, stablecoins, and developer tools.",
+          "budget": "$5k-$15k",
+          "desired_count": 10
+        },
+        "prospects": [
+          {
+            "rank": 1,
+            "company": "Privy",
+            "snapshot": "Wallet and onboarding infrastructure for crypto applications.",
+            "recent_signal": "Strong fit with consumer crypto and wallet builder audience.",
+            "fit_rationale": "Audience includes founders and technical operators who choose embedded wallet infrastructure.",
+            "suggested_contact": null,
+            "confidence": "medium",
+            "draft_outreach_angle": "Sponsor a builder mixer focused on consumer onboarding and wallet UX."
+          },
+          {
+            "rank": 2,
+            "company": "Bridge",
+            "snapshot": "Stablecoin orchestration and payment infrastructure.",
+            "recent_signal": "Relevant to stablecoin, payments, and developer tooling conversations.",
+            "fit_rationale": "VCW audience overlaps with founders building payment and stablecoin products.",
+            "suggested_contact": null,
+            "confidence": "medium",
+            "draft_outreach_angle": "Position the event as a way to meet founders building stablecoin distribution."
+          },
+          {
+            "rank": 3,
+            "company": "Alchemy",
+            "snapshot": "Developer platform for web3 infrastructure teams.",
+            "recent_signal": "Clear developer-tooling fit for crypto infrastructure founders.",
+            "fit_rationale": "Technical operator audience maps directly to developer platform adoption.",
+            "suggested_contact": null,
+            "confidence": "medium",
+            "draft_outreach_angle": "Sponsor technical programming for builders choosing infrastructure providers."
+          }
+        ]
+      },
+      "approval_gate": "No sponsor email, CRM update, Sheet row, or Slides one-pager is published automatically."
+    },
+    {
+      "spoke": "outreach",
+      "status": "draft_ready",
+      "relationship_maintenance": {
+        "contact_id": "contact-001",
+        "name": "Jordan Lee",
+        "company": "VaultKit",
+        "staleness_reason": "Last touch was 2026-01-12 and no Gmail activity is summarized after January.",
+        "suggested_angle": "Reconnect around future panel interest and ask whether they want to be considered for June programming.",
+        "draft_email": {
+          "subject": "Quick VCW follow-up",
+          "body": "Hi Jordan,\n\nI was thinking back to the January builder dinner and your interest in future panels. We are shaping upcoming VCW programming and I wanted to see what themes you are most excited to discuss this summer.\n\nBest,\nELA Team"
+        }
+      },
+      "purpose_driven_outreach": {
+        "goal": "Find 10 crypto founders interested in speaking at our June event.",
+        "target_profile": "Founders building in crypto infrastructure, consumer crypto, wallets, stablecoins, or developer tooling.",
+        "contacts": [
+          {
+            "rank": 1,
+            "name": "Avery Chen",
+            "company": "Northstar Wallet",
+            "source": "crm",
+            "fit_rationale": "Founder building consumer wallet infrastructure; directly matches stablecoin and consumer crypto theme.",
+            "confidence": "high",
+            "draft_email": {
+              "subject": "Speaker fit for VCW stablecoin event",
+              "body": "Hi Avery, we are putting together a June conversation on stablecoins and consumer payments. Your Northstar Wallet work feels directly relevant for a founder/operator audience."
+            }
+          },
+          {
+            "rank": 2,
+            "name": "Jordan Lee",
+            "company": "VaultKit",
+            "source": "crm",
+            "fit_rationale": "Known VCW relationship with prior interest in panels.",
+            "confidence": "medium",
+            "draft_email": {
+              "subject": "June VCW speaker idea",
+              "body": "Hi Jordan, we are shaping a June crypto infrastructure event and I remembered your interest in future panels. Would you be open to discussing a possible fit?"
+            }
+          }
+        ]
+      },
+      "telegram_digest": [
+        "1 stale relationship needs follow-up: Jordan Lee at VaultKit.",
+        "2 purpose-driven speaker candidates drafted for June crypto programming."
+      ],
+      "approval_gate": "All Gmail output is draft-only. No CRM write happens without approval."
+    }
+  ]
+}
