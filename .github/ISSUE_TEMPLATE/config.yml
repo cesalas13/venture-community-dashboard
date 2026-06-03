@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sensitive security or privacy issue
+    url: https://github.com/cesalas13/venture-community-dashboard/security/policy
+    about: Use the security policy for sensitive reports. Do not paste secrets into public issues.

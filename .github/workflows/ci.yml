@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Privacy audit
+        run: python3 scripts/privacy_audit.py
+
+      - name: Dashboard eval
+        run: python3 scripts/eval_sandbox_dashboard.py
+
+      - name: Validate JSON
+        run: |
+          python3 -m json.tool state.json >/dev/null
+          find embeds -name '*.json' -type f -exec python3 -m json.tool {} \; >/dev/null
+
+      - name: Python syntax
+        run: python3 -m py_compile scripts/eval_sandbox_dashboard.py scripts/ops-server.py scripts/sync-event-master.py scripts/privacy_audit.py
+
+      - name: JavaScript syntax
+        run: find embeds/sandbox/demo -name '*.js' -type f -exec node --check {} \;
