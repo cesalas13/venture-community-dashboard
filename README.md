@@ -101,6 +101,7 @@ find embeds/sandbox/demo -name '*.js' -type f -exec node --check {} \;
 │   ├── ops-server.py              # optional local chat server scaffold
 │   └── sync-event-master.py       # demo sheet snapshot sync helper
 ├── docs/
+│   ├── case-study.md
 │   ├── privacy-model.md
 │   ├── workflows.md
 │   └── operator-guide.md
@@ -138,6 +139,8 @@ See [SECURITY.md](SECURITY.md) and [docs/privacy-model.md](docs/privacy-model.md
 ## Open Source Status
 
 This is an early-stage public template extracted from a richer private operations workflow. The goal is to make a useful, inspectable reference for local-first, agent-assisted operations systems.
+
+Start with [docs/case-study.md](docs/case-study.md) for the public evaluation frame.
 
 Near-term work is tracked in [ROADMAP.md](ROADMAP.md).
 
