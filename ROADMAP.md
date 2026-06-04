@@ -21,8 +21,8 @@ Venture Community Ops is an early-stage public template. The roadmap focuses on 
 
 ## Phase 3: Local-First Data Model
 
-- Document the `state.json` schema.
-- Add `examples/demo-state.json` as a smaller starter state.
+- Keep `docs/state-schema.md` current as the public data contract.
+- Keep `examples/demo-state.json` current as a smaller starter state.
 - Add import/export helpers for private local state.
 - Add a redaction helper for public demo exports.
 

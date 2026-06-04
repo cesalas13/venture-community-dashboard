@@ -78,7 +78,8 @@ Stop the local server with `Ctrl+C`.
 python3 scripts/privacy_audit.py
 python3 scripts/eval_sandbox_dashboard.py
 python3 -m json.tool state.json >/dev/null
-python3 -m py_compile scripts/eval_sandbox_dashboard.py scripts/ops-server.py scripts/sync-event-master.py
+python3 -m json.tool examples/demo-state.json >/dev/null
+python3 -m py_compile scripts/eval_sandbox_dashboard.py scripts/ops-server.py scripts/sync-event-master.py scripts/privacy_audit.py
 ```
 
 Optional JavaScript syntax check:
@@ -102,10 +103,12 @@ find embeds/sandbox/demo -name '*.js' -type f -exec node --check {} \;
 │   └── sync-event-master.py       # demo sheet snapshot sync helper
 ├── docs/
 │   ├── case-study.md
+│   ├── state-schema.md
 │   ├── privacy-model.md
 │   ├── workflows.md
 │   └── operator-guide.md
 ├── examples/
+│   ├── demo-state.json
 │   └── event-ops-demo.md
 └── ROADMAP.md
 ```
@@ -113,6 +116,8 @@ find embeds/sandbox/demo -name '*.js' -type f -exec node --check {} \;
 ## Customizing It
 
 Start with `state.json`. The dashboard reads structured records for products, projects, tools, cost scenarios, approval queues, workstreams, sources, and retros.
+
+Use [docs/state-schema.md](docs/state-schema.md) to understand the data contract. Use [examples/demo-state.json](examples/demo-state.json) as a smaller public-safe starter state.
 
 Safe customization path:
 

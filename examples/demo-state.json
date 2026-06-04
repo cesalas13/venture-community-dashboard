@@ -1,0 +1,172 @@
+{
+  "generated_at": "demo",
+  "now": {
+    "headline": "Demo venture community review",
+    "focus": "Review blocked event operations and approval queue proposals.",
+    "next_action": "Approve or reject the venue hold proposal.",
+    "risk": "No live writes are enabled in this starter state."
+  },
+  "products": [
+    {
+      "id": "events",
+      "name": "Event Ops",
+      "status": "active",
+      "owner": "operator",
+      "next_action": "Review venue hold proposal."
+    },
+    {
+      "id": "sponsors",
+      "name": "Sponsor Ops",
+      "status": "watch",
+      "owner": "operator",
+      "next_action": "Review renewal draft before sending."
+    }
+  ],
+  "work_status": {
+    "active": 2,
+    "blocked": 1,
+    "watch": 1,
+    "last_reviewed": "demo"
+  },
+  "sheet_sync": {
+    "status": "demo",
+    "source": "event-sheet-demo",
+    "last_checked": "demo",
+    "proposed_updates": [
+      {
+        "proposal_id": "proposal-venue-hold",
+        "source_id": "event-sheet-demo",
+        "action_type": "sheet_update",
+        "risk_level": "medium",
+        "requires_approval": true,
+        "approval_status": "pending",
+        "rollback_note": "Ignore the proposed update if venue details are not confirmed."
+      }
+    ]
+  },
+  "newsletter_automation": {
+    "status": "draft",
+    "issue": "Founder Dinner Recap",
+    "next_action": "Review missing links and approve recap draft.",
+    "requires_approval": true
+  },
+  "embeds": [
+    {
+      "id": "sandbox-event-ops",
+      "title": "Event Ops Sandbox",
+      "type": "local_fixture",
+      "src": "embeds/sandbox/demo/index.html",
+      "status": "demo"
+    }
+  ],
+  "events": {
+    "items": [
+      {
+        "id": "founder-dinner-demo",
+        "title": "Founder Dinner Demo",
+        "status": "venue hold needs approval",
+        "owner": "operator",
+        "next_action": "Confirm venue terms before any write."
+      }
+    ]
+  },
+  "venues": {
+    "items": [
+      {
+        "id": "venue-demo",
+        "name": "Demo Venue",
+        "status": "candidate",
+        "capacity": 80,
+        "next_action": "Check hold terms and approval status."
+      }
+    ]
+  },
+  "sponsors": {
+    "items": [
+      {
+        "id": "sponsor-demo",
+        "name": "Demo Sponsor",
+        "status": "research",
+        "fit_score": 7,
+        "next_action": "Review one-pager outline."
+      }
+    ]
+  },
+  "pipeline": {
+    "summary": "Demo pipeline only.",
+    "items": []
+  },
+  "cost_scenarios": {
+    "scenarios": [
+      {
+        "scenario": "demo",
+        "model": "planning-estimate",
+        "estimated_calls": 50,
+        "estimated_cost": 2.5,
+        "control": "Batch summaries and keep drafts human-approved."
+      }
+    ]
+  },
+  "learning": [],
+  "notes": [
+    {
+      "id": "note-human-approval",
+      "title": "Human approval boundary",
+      "body": "Agents may draft and propose. Humans approve writes."
+    }
+  ],
+  "projects": [],
+  "tools": [],
+  "premium_stack": [],
+  "agents": [
+    {
+      "id": "operator-review-agent",
+      "name": "Operator Review Agent",
+      "allowed": "read, summarize, draft, propose",
+      "forbidden": "send, publish, update production systems without approval"
+    }
+  ],
+  "sources": [
+    {
+      "id": "event-sheet-demo",
+      "name": "Event Sheet Demo",
+      "type": "spreadsheet_fixture",
+      "trust_level": "demo",
+      "read_policy": "allowed",
+      "write_policy": "approval_required",
+      "notes": "Synthetic fixture only."
+    }
+  ],
+  "memory": [],
+  "ideas": [],
+  "ideas_v2": [],
+  "automations": [
+    {
+      "id": "venue-reply-summary",
+      "title": "Venue reply summary",
+      "status": "sandbox",
+      "requires_approval": true,
+      "next_action": "Review the proposed venue hold before writing to a sheet."
+    }
+  ],
+  "local_llm": [],
+  "retros": [],
+  "todos": [
+    {
+      "id": "todo-approval-review",
+      "title": "Review pending approval proposal",
+      "priority": "must",
+      "status": "open"
+    }
+  ],
+  "ops_entity": {
+    "name": "Demo Venture Community",
+    "mode": "public-safe demo",
+    "live_writes_enabled": false
+  },
+  "team_pulse": {
+    "status": "review",
+    "risk": "Approval queue needs owner review.",
+    "next_action": "Review proposed write before changing any production system."
+  }
+}

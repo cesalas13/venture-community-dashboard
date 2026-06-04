@@ -90,8 +90,8 @@ Use this checklist when reviewing the project.
 
 ## Next Strongest Improvements
 
-1. Add a smaller starter `examples/demo-state.json`.
-2. Document the public `state.json` schema.
-3. Add screenshot docs using sanitized demo records only.
-4. Add module-specific approval queue examples.
-5. Add release checklist automation for privacy, JSON shape, and route integrity.
+1. Add screenshot docs using sanitized demo records only.
+2. Add module-specific approval queue examples.
+3. Add release checklist automation for privacy, JSON shape, and route integrity.
+4. Add import/export helpers for private local state.
+5. Add redaction helpers for public demo exports.
